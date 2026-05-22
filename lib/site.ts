@@ -5,8 +5,8 @@ export const site = {
   description:
     'Free in-home water testing and custom filtration systems for Georgia, North Carolina, South Carolina, Alabama, and North Florida. Family-owned since 2004.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://filtertechinc.com',
-  phone: '+17067123456',
-  phoneDisplay: '(706) 712-3456',
+  phone: '+17704871066',
+  phoneDisplay: '(770) 487-1066',
   email: 'info@filtertechinc.com',
   address: {
     street: '101 Main Street',

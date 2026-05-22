@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Container } from '@/components/layout/Container';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { PullQuote } from '@/components/ui/PullQuote';
@@ -15,29 +16,18 @@ export function AuthorityBlock() {
       <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-sm border border-stone-300 bg-stone-100 lg:max-w-none">
-            {/* Photo placeholder */}
-            <div
-              aria-hidden
-              className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_50%_30%,rgba(36,49,55,0.08),transparent_60%)]"
-            >
-              <svg
-                viewBox="0 0 100 100"
-                className="h-24 w-24 text-charcoal/40"
-                aria-hidden
-              >
-                <circle cx="50" cy="38" r="16" fill="currentColor" opacity="0.4" />
-                <path
-                  d="M20 88 C20 70 35 60 50 60 C65 60 80 70 80 88 Z"
-                  fill="currentColor"
-                  opacity="0.4"
-                />
-              </svg>
-            </div>
+            <Image
+              src="/images/jay-and-karen.jpg"
+              alt="Jay and Karen Hanlon — Filter Tech&rsquo;s family-owned operators, standing together in branded shirts"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover object-center"
+            />
             <div className="absolute bottom-0 left-0 right-0 border-t border-stone-300 bg-cream/95 p-4 text-center">
               <p className="text-eyebrow font-semibold uppercase tracking-widest text-red">
-                Owner & Operator
+                Owners & Operators
               </p>
-              <p className="mt-1 font-serif text-lg text-charcoal">Jay Hanlon</p>
+              <p className="mt-1 font-serif text-lg text-charcoal">Jay &amp; Karen Hanlon</p>
             </div>
           </div>
         </div>
@@ -51,7 +41,9 @@ export function AuthorityBlock() {
             Jay started as a plumber. Twelve years in the trade, then nine more
             managing filtration for a national company in Florida. He bought Filter
             Tech in 2010 and has run it the same way ever since: test first, explain
-            everything, and only recommend what the water actually needs.
+            everything, and only recommend what the water actually needs. Karen runs
+            the office, the books, and most of the conversations that get the
+            schedule built.
           </p>
           <div className="mt-8">
             <PullQuote

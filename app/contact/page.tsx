@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
@@ -49,6 +50,15 @@ export default function ContactPage() {
       <section className="bg-cream py-20 sm:py-28">
         <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <aside className="lg:col-span-5">
+            <div className="relative mb-10 aspect-square overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
+              <Image
+                src="/images/jay-with-sign.jpg"
+                alt="Jay Hanlon holding a Filter Tech sign with the company phone number"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-center"
+              />
+            </div>
             <EyebrowLabel>Get In Touch</EyebrowLabel>
             <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
               We answer every message.

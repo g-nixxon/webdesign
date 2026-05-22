@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Image from 'next/image';
 import { Phone } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
@@ -8,7 +8,7 @@ import { site } from '@/lib/site';
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      {/* Soft water gradient texture — no blue, stays neutral */}
+      {/* Soft warm gradient — no blue, stays neutral */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_70%_30%,rgba(36,49,55,0.06),transparent_55%),radial-gradient(circle_at_20%_80%,rgba(222,62,64,0.04),transparent_45%)]"
@@ -49,60 +49,18 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Visual panel — uses a layered, calm composition (no blue) */}
+        {/* Visual panel — James Hanlon headshot with quote caption */}
         <div className="lg:col-span-5">
           <div className="relative mx-auto max-w-md lg:max-w-none">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-[linear-gradient(180deg,rgba(36,49,55,0.04)_0%,rgba(36,49,55,0.0)_40%,rgba(36,49,55,0.08)_100%)]"
+              <Image
+                src="/images/jay-headshot.jpg"
+                alt="Jay Hanlon, Certified Water Specialist and owner of Filter Tech Inc., smiling in a Filter Tech t-shirt and cap"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-top"
               />
-              {/* Decorative line drops */}
-              <svg
-                viewBox="0 0 400 500"
-                className="absolute inset-0 h-full w-full text-charcoal/30"
-                aria-hidden
-              >
-                <defs>
-                  <linearGradient id="dropFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="currentColor" stopOpacity="0.15" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="0.05" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M200 60 C140 160 120 220 120 270 a80 80 0 1 0 160 0 c0 -50 -20 -110 -80 -210z"
-                  fill="url(#dropFill)"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <circle
-                  cx="200"
-                  cy="400"
-                  r="40"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  opacity="0.4"
-                />
-                <circle
-                  cx="200"
-                  cy="400"
-                  r="70"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  opacity="0.25"
-                />
-                <circle
-                  cx="200"
-                  cy="400"
-                  r="100"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  opacity="0.15"
-                />
-              </svg>
               <div className="absolute bottom-0 left-0 right-0 border-t border-stone-300 bg-cream/95 p-5 backdrop-blur">
                 <p className="font-serif text-base leading-tight text-charcoal sm:text-lg">
                   &ldquo;You can&rsquo;t fix what you haven&rsquo;t tested.&rdquo;

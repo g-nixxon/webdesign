@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Droplet } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/cn';
 
 interface LogoProps {
@@ -17,9 +17,16 @@ export function Logo({ className, variant = 'dark' }: LogoProps) {
     >
       <span
         aria-hidden
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-current"
+        className="flex h-10 w-10 flex-none items-center justify-center overflow-hidden rounded-sm bg-white p-1 shadow-[0_0_0_1px_rgba(36,49,55,0.08)] sm:h-11 sm:w-11"
       >
-        <Droplet size={16} strokeWidth={2.25} />
+        <Image
+          src="/images/filter-tech-logo.jpg"
+          alt=""
+          width={64}
+          height={64}
+          className="h-full w-full object-contain"
+          priority
+        />
       </span>
       <span className="flex flex-col leading-tight">
         <span className="text-base font-medium tracking-tight sm:text-lg">

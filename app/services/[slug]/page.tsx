@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
@@ -46,6 +47,30 @@ export default function ServiceDetailPage({
           All services
         </Link>
       </PageHero>
+
+      {service.bannerImage ? (
+        <section className="bg-cream pt-12 sm:pt-16">
+          <Container>
+            <figure className="overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
+              <div className="relative aspect-[3/2] sm:aspect-[16/9]">
+                <Image
+                  src={service.bannerImage.src}
+                  alt={service.bannerImage.alt}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1200px"
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
+              {service.bannerImage.caption ? (
+                <figcaption className="border-t border-stone-300 bg-cream/95 p-4 text-center text-sm text-stone-600">
+                  {service.bannerImage.caption}
+                </figcaption>
+              ) : null}
+            </figure>
+          </Container>
+        </section>
+      ) : null}
 
       <section className="bg-cream py-20 sm:py-28">
         <Container className="grid gap-14 lg:grid-cols-12 lg:gap-16">
@@ -107,7 +132,26 @@ export default function ServiceDetailPage({
           </div>
 
           <aside className="lg:col-span-4">
-            <div className="sticky top-24 rounded-sm border border-stone-300 bg-stone-100 p-7 sm:p-9">
+            <div className="sticky top-24 space-y-6">
+              {service.asideImage ? (
+                <figure className="overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      src={service.asideImage.src}
+                      alt={service.asideImage.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
+                  {service.asideImage.caption ? (
+                    <figcaption className="border-t border-stone-300 bg-cream/95 p-3 text-center text-xs text-stone-600">
+                      {service.asideImage.caption}
+                    </figcaption>
+                  ) : null}
+                </figure>
+              ) : null}
+              <div className="rounded-sm border border-stone-300 bg-stone-100 p-7 sm:p-9">
               <EyebrowLabel>What&rsquo;s Included</EyebrowLabel>
               <ul className="mt-6 space-y-3">
                 {service.includes.map((item) => (
@@ -130,6 +174,7 @@ export default function ServiceDetailPage({
                 <p className="mt-3 text-center text-xs text-stone-600">
                   No charge. No obligation.
                 </p>
+              </div>
               </div>
             </div>
           </aside>

@@ -1,3 +1,9 @@
+export interface ServiceImage {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
 export interface ServiceContent {
   slug: string;
   title: string;
@@ -7,6 +13,8 @@ export interface ServiceContent {
   includes: string[];
   fitsHome: string;
   faqs: { q: string; a: string }[];
+  bannerImage?: ServiceImage;
+  asideImage?: ServiceImage;
 }
 
 export const serviceContent: Record<string, ServiceContent> = {
@@ -47,6 +55,16 @@ export const serviceContent: Record<string, ServiceContent> = {
         a: 'Often yes. Whole-house handles the bulk problems; an RO or drinking water system polishes the water you actually drink.',
       },
     ],
+    bannerImage: {
+      src: '/images/install-james.jpg',
+      alt: 'Jay Hanlon installing a whole-house filtration system — adjusting the control valve above the filter tanks',
+      caption: 'A whole-house install in progress',
+    },
+    asideImage: {
+      src: '/images/system-whole-house.jpg',
+      alt: 'Finished whole-house filtration installation with twin tanks, brine reservoir, and UV light',
+      caption: 'A finished install in a customer garage',
+    },
   },
   'drinking-water-systems': {
     slug: 'drinking-water-systems',
@@ -79,6 +97,11 @@ export const serviceContent: Record<string, ServiceContent> = {
         a: 'Most cartridges last 6–12 months. Heavy use or higher contaminant levels may shorten that.',
       },
     ],
+    asideImage: {
+      src: '/images/system-ro.jpg',
+      alt: 'A Filter Tech drinking water system installed under a kitchen sink, with storage tank and filter stages',
+      caption: 'A typical Filter Tech under-sink install',
+    },
   },
   'reverse-osmosis': {
     slug: 'reverse-osmosis',
@@ -112,6 +135,11 @@ export const serviceContent: Record<string, ServiceContent> = {
         a: 'Modern RO units have improved efficiency dramatically. We install systems with low waste ratios.',
       },
     ],
+    asideImage: {
+      src: '/images/system-ro.jpg',
+      alt: 'A Filter Tech reverse osmosis system installed under a kitchen sink — storage tank, multi-stage filters, and dedicated faucet line',
+      caption: 'Our most popular drinking water system',
+    },
   },
   'alkaline-systems': {
     slug: 'alkaline-systems',

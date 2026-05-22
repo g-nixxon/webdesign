@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook } from 'lucide-react';
 import { Logo } from './Logo';
 import { site, services } from '@/lib/site';
 
@@ -38,6 +38,27 @@ export function Footer() {
                 {site.address.city}, {site.address.region} {site.address.postalCode}
               </span>
             </div>
+          </div>
+
+          {/* Social */}
+          <div className="mt-6 flex items-center gap-3">
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Filter Tech on Facebook"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/30 text-cream/80 transition-colors hover:border-cream hover:text-cream"
+            >
+              <Facebook size={16} />
+            </a>
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-cream/70 hover:text-cream"
+            >
+              /filtertechinc
+            </a>
           </div>
         </div>
 

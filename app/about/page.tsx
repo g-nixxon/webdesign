@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
 import { PullQuote } from '@/components/ui/PullQuote';
@@ -20,6 +21,30 @@ export default function AboutPage() {
         title="A water specialist, not a salesman."
         description="Filter Tech Inc. is owned and operated by Jay Hanlon, a Certified Water Specialist with three decades of experience reading Southern water — and a stubborn belief that the customer should see the test before they hear the price."
       />
+
+      {/* Family banner */}
+      <section className="bg-cream pt-12 sm:pt-16">
+        <Container>
+          <figure className="relative overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
+            <div className="relative aspect-[3/2] sm:aspect-[16/9]">
+              <Image
+                src="/images/family.jpg"
+                alt="The Hanlon family — Jay, Karen, their children, and granddaughter — in matching Filter Tech shirts"
+                fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                className="object-cover object-center"
+                priority
+              />
+            </div>
+            <figcaption className="border-t border-stone-300 bg-cream/95 p-4 text-center text-sm text-stone-600 sm:p-5">
+              <span className="text-eyebrow font-semibold uppercase tracking-widest text-red">
+                Family-Owned
+              </span>
+              <span className="ml-3">Three generations of the Hanlon family</span>
+            </figcaption>
+          </figure>
+        </Container>
+      </section>
 
       <section className="bg-cream py-20 sm:py-28">
         <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
@@ -153,6 +178,69 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </Container>
+      </section>
+
+      {/* Trusted Partners */}
+      <section className="bg-cream py-20 sm:py-28">
+        <Container>
+          <div className="max-w-2xl">
+            <EyebrowLabel>Trusted Partners</EyebrowLabel>
+            <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
+              The team you’ll see on the job.
+            </h2>
+            <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
+              We keep our circle small on purpose. The contractors who work
+              alongside Filter Tech have been hand-picked over years — same
+              standards, same way of treating a customer.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:gap-8">
+            <figure className="overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
+              <div className="relative aspect-square">
+                <Image
+                  src="/images/install-lester.jpg"
+                  alt="Lester, a trusted Filter Tech contractor, working on the control panel of a treatment system"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+              </div>
+              <figcaption className="border-t border-stone-300 p-5">
+                <p className="text-eyebrow font-semibold uppercase tracking-widest text-red">
+                  Trusted Contractor
+                </p>
+                <p className="mt-2 font-serif text-xl text-charcoal">Lester</p>
+                <p className="mt-1 text-sm text-stone-600">
+                  Long-time installation partner on Filter Tech jobs across the
+                  region.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure className="overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
+              <div className="relative aspect-square">
+                <Image
+                  src="/images/install-duane.jpg"
+                  alt="Duane, owner of A.P. Plumbing, working on the plumbing connections of a Filter Tech installation"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover object-top"
+                />
+              </div>
+              <figcaption className="border-t border-stone-300 p-5">
+                <p className="text-eyebrow font-semibold uppercase tracking-widest text-red">
+                  Trusted Plumber
+                </p>
+                <p className="mt-2 font-serif text-xl text-charcoal">Duane</p>
+                <p className="mt-1 text-sm text-stone-600">
+                  Owner of A.P. Plumbing — our go-to for the plumbing side of
+                  every install.
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </Container>
       </section>
