@@ -22,29 +22,37 @@ export const serviceContent: Record<string, ServiceContent> = {
     slug: 'whole-house-filtration',
     title: 'Whole-House Filtration',
     blurb:
-      'Cleaner water at every faucet, shower, and appliance — not just the kitchen.',
+      'Cleaner, conditioned water at every faucet, shower, and appliance — at the point water enters your home.',
     problem:
-      'Hard water destroys appliances and dries out skin. Chlorine and sediment fade clothes, stain fixtures, and pass through every shower you take. A whole-house system handles it all at the point your water enters the home.',
+      'A whole-house system filters water before it ever reaches a tap. That matters because what comes through the main line isn’t just one thing — it can be chlorine and chloramine from city treatment, disinfection byproducts (THMs and HAAs), traces of lead from old plumbing, PFAS, sediment from well water, or the hardness that scales appliances and dries out skin. We size and stack a system to fit what your water is actually carrying.',
     how: [
       'Water enters your home through a single main line.',
-      'We install a multi-stage filter on that line, sized to your home’s flow rate.',
-      'Sediment, chlorine, and dissolved hardness are removed before water ever reaches a tap.',
-      'Annual service swaps filter media and inspects the housing.',
+      'We install a multi-stage filter sized to your home’s flow rate. Common stages: activated carbon for chlorine, taste, and VOCs; certified lead-reduction media when the testing calls for it; and — when hardness is the issue — a softener or conditioner.',
+      'Two softening options: a traditional ion-exchange softener (resin beads regenerated with a salt brine cycle), or a salt-free conditioner using Template Assisted Crystallization (TAC) — no salt, no waste water, low maintenance.',
+      'The right combination depends on the lab results from your free in-home water test.',
     ],
     includes: [
-      'Free in-home water test before we recommend',
-      'Pre-filter housing and media',
-      'Carbon block for chlorine and taste',
-      'Conditioning stage for hardness',
+      'Free in-home consultation and water sample collection',
+      'Pre-filter housing and media sized to your home',
+      'Activated carbon for chlorine, taste, and VOCs',
+      'Certified lead-reduction stage when the water calls for it',
+      'Softener or salt-free conditioner when hardness is the issue',
       'Professional installation by a Certified Installer',
-      'One-year service visit included',
     ],
     fitsHome:
-      'Homes on city water with chlorine concerns, or any home with hardness, sediment, or staining issues. Great for families who want one solution for the whole house.',
+      'Homes on city water dealing with chlorine, taste, or disinfection byproduct concerns. Homes on well water dealing with sediment, iron, or staining. Any home where hard water is wrecking appliances or making showers feel rough. Best fit for families who want one solution covering the whole house — every shower, every appliance, every tap.',
     faqs: [
       {
         q: 'Will it slow my water pressure?',
         a: 'A properly sized whole-house system has no noticeable pressure drop. We measure your flow rate before recommending a size.',
+      },
+      {
+        q: 'Salt softener or salt-free conditioner — which do I need?',
+        a: 'Depends on your water. Ion-exchange softeners completely remove hardness — best for very hard water and homes where appliance protection is the priority. Salt-free TAC conditioners prevent scale without removing minerals — easier to maintain, no waste water, but the water is technically still hard. The lab results tell us which one fits.',
+      },
+      {
+        q: 'Will it remove PFAS?',
+        a: 'Carbon-based whole-house filtration removes a meaningful portion of PFAS. For the highest reduction levels, we recommend pairing the whole-house system with a Reverse Osmosis unit at the kitchen for drinking water.',
       },
       {
         q: 'How often does it need service?',
@@ -52,7 +60,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
       {
         q: 'Do I still need a drinking water system at the kitchen?',
-        a: 'Often yes. Whole-house handles the bulk problems; an RO or drinking water system polishes the water you actually drink.',
+        a: 'Often yes. Whole-house handles the bulk problems; an under-sink Reverse Osmosis or Hydrogen system polishes the water you actually drink.',
       },
     ],
     bannerImage: {
@@ -66,69 +74,39 @@ export const serviceContent: Record<string, ServiceContent> = {
       caption: 'A finished install in a customer garage',
     },
   },
-  'drinking-water-systems': {
-    slug: 'drinking-water-systems',
-    title: 'Drinking Water Systems',
-    blurb: 'Polished, great-tasting water at the kitchen sink.',
-    problem:
-      'Even filtered house water can carry taste and odor from dissolved solids that a whole-house unit can’t remove. A drinking water system handles that last mile — for what you actually drink and cook with.',
-    how: [
-      'A compact filter system installs under your kitchen sink.',
-      'Water passes through multiple stages — typically sediment, carbon, and a polishing filter.',
-      'A dedicated faucet on your counter delivers the finished water.',
-      'No tank required for most models.',
-    ],
-    includes: [
-      'Free in-home water test',
-      'Multi-stage drinking water unit',
-      'Dedicated kitchen faucet',
-      'Professional installation under the sink',
-      'Filter change schedule and reminders',
-    ],
-    fitsHome:
-      'Homes where the priority is great-tasting drinking and cooking water without the cost of a whole-house upgrade. Renters with landlord approval can also use these.',
-    faqs: [
-      {
-        q: 'How is this different from reverse osmosis?',
-        a: 'A drinking water system removes taste, odor, and many contaminants but leaves more minerals in. RO is the deepest filtration we install.',
-      },
-      {
-        q: 'How long do the filters last?',
-        a: 'Most cartridges last 6–12 months. Heavy use or higher contaminant levels may shorten that.',
-      },
-    ],
-    asideImage: {
-      src: '/images/system-ro.jpg',
-      alt: 'A Filter Tech drinking water system installed under a kitchen sink, with storage tank and filter stages',
-      caption: 'A typical Filter Tech under-sink install',
-    },
-  },
+
   'reverse-osmosis': {
     slug: 'reverse-osmosis',
-    title: 'Reverse Osmosis Systems',
+    title: 'Reverse Osmosis Drinking Water',
     blurb:
-      'The deepest filtration we install — strips dissolved solids most filters leave behind.',
+      'Our most popular drinking water system. The same filtration hospitals, labs, and bottling plants rely on — at your kitchen sink.',
     problem:
-      'Total dissolved solids — minerals, salts, traces of metals — pass straight through ordinary filters. They affect taste, leave spots on glassware, and matter for sensitive households. RO uses a semi-permeable membrane to filter at the molecular level.',
+      'City water is treated to be safe, not pure. Even after treatment, what comes through your tap can carry chlorine and chloramine, heavy metals, PFAS, and disinfection byproducts like trihalomethanes (THMs) and haloacetic acids (HAAs). Add to that the practical realities — mains break, pipes corrode, boil-water alerts happen. Reverse Osmosis is what hospitals, labs, and bottling plants use when they need water they can count on.',
     how: [
-      'Pre-filters remove sediment and chlorine that would damage the membrane.',
-      'The RO membrane filters water under pressure, separating dissolved solids.',
-      'A small storage tank holds the finished water for instant access.',
-      'A post-filter polishes the water before it reaches your faucet.',
+      'Pre-filters strip sediment and chlorine that would otherwise damage the membrane.',
+      'Water is forced through a semi-permeable membrane that blocks dissolved salts, heavy metals, PFAS, nitrates, fluoride, and microbes.',
+      'Total dissolved solids drop 90 to 99 percent — consistent, measurable results we can show you on a meter.',
+      'A small storage tank holds the finished water for instant access at a dedicated faucet.',
+      'Optional: a remineralization cartridge puts calcium and magnesium back if you want minerals in the finished water.',
     ],
     includes: [
-      'Free water test with TDS reading',
-      'Four- or five-stage RO unit',
+      'Free in-home consultation and water sample',
+      'Multi-stage RO unit',
       'Storage tank and dedicated faucet',
-      'Professional installation',
-      'Annual membrane and filter service plan',
+      'Professional installation under the sink',
+      'Scheduled filter and membrane replacement reminders',
+      'Optional remineralization cartridge',
     ],
     fitsHome:
-      'Homes with high TDS readings, well water, or family members with sensitivities. Anyone who wants the cleanest possible drinking water.',
+      'Homes with high TDS readings, well water, or family members with sensitivities. The default for anyone who wants the cleanest possible drinking water at the kitchen sink — and the right call for households worried about PFAS, lead, or boil-water alerts.',
     faqs: [
       {
+        q: 'How much does it actually remove?',
+        a: 'Total dissolved solids drop between 90 and 99 percent. We can show you the reading on a TDS meter before and after — it’s the cleanest demonstration of how the system works.',
+      },
+      {
         q: 'Does RO remove minerals my body needs?',
-        a: 'Most minerals come from food, not water. If you want minerals added back, we can pair an RO with an alkaline post-filter.',
+        a: 'Most of your minerals come from food, not water. If you want them back in the water anyway, we add a remineralization cartridge after the membrane — calcium and magnesium, the same minerals you’d get from spring water.',
       },
       {
         q: 'How much water does it waste?',
@@ -141,100 +119,123 @@ export const serviceContent: Record<string, ServiceContent> = {
       caption: 'Our most popular drinking water system',
     },
   },
-  'alkaline-systems': {
-    slug: 'alkaline-systems',
-    title: 'Alkaline Systems',
+
+  'hydrogen-systems': {
+    slug: 'hydrogen-systems',
+    title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
-      'Adds minerals back after deep filtration for a smoother taste and balanced pH.',
+      'The Delphi H2 Under-Sink Water Ionizer — filtered, ionized water enriched with molecular hydrogen and balanced minerals.',
     problem:
-      'Reverse osmosis strips almost everything out — which is great for purity but leaves the water with a flat taste and a slightly acidic pH. An alkaline stage replaces healthy minerals and brings the pH back up.',
+      'Filtration gets your water to clean. The Delphi H2 Under-Sink Water Ionizer takes the next step: it ionizes filtered water and enriches it with molecular hydrogen (H₂) — the compound at the center of more than a thousand peer-reviewed studies on antioxidant, recovery, and inflammation benefits. For customers already taking supplements for similar reasons, it’s a way to get those benefits from the water they’re drinking anyway.',
     how: [
-      'Water leaves the RO membrane in its most filtered state.',
-      'A mineral cartridge introduces calcium, magnesium, and trace minerals.',
-      'The pH rises naturally as the water absorbs them.',
-      'You get a smoother, rounder flavor at the tap.',
+      'Water enters the Delphi unit and passes through built-in multi-stage pre-filtration — no separate RO required.',
+      'The ionization stage enriches the water with dissolved molecular hydrogen (H₂).',
+      'Naturally occurring calcium and magnesium are preserved in the finished water, supporting a balanced (slightly alkaline) pH.',
+      'Hydrogen-enriched water is delivered to a dedicated faucet at the kitchen sink.',
     ],
     includes: [
-      'Free water test and pH reading',
-      'Alkaline post-filter stage',
-      'Installation alongside an existing or new RO',
-      'Filter replacement schedule',
+      'Free in-home consultation and water sample',
+      'Delphi H2 Under-Sink Water Ionizer',
+      'Built-in multi-stage pre-filtration',
+      'Dedicated kitchen faucet',
+      'Professional installation under the sink',
+      'Scheduled filter replacement reminders',
     ],
     fitsHome:
-      'Households with an RO system who want a fuller-tasting water and a higher pH. Also a good fit for anyone who prefers mineral water flavor.',
+      'Health-conscious households who want their drinking water to do more than be clean — particularly people already taking antioxidant or recovery supplements who’d rather get the same benefits from water they’re drinking anyway. Common pick among athletes managing inflammation and recovery.',
     faqs: [
       {
-        q: 'Can I add alkaline to my existing RO?',
-        a: 'In most cases yes — we’ll inspect your unit and confirm.',
+        q: 'What does hydrogen water actually do?',
+        a: 'Molecular hydrogen (H₂) acts as a selective antioxidant — it targets the free radicals tied to oxidative stress while leaving healthy molecules alone. Research has explored its role in ATP production, lactic acid reduction, and inflammation. We don’t make medical promises; we install the systems the research is pointing at.',
       },
       {
-        q: 'How alkaline does it make the water?',
-        a: 'Typically pH 8.5–9.5, depending on the cartridge.',
+        q: 'Does it need an RO system upstream?',
+        a: 'No. The Delphi unit has its own multi-stage pre-filtration. Some customers pair it with an RO if they want the deepest possible filtration before the ionization step, but it isn’t required.',
+      },
+      {
+        q: 'What’s the pH of the finished water?',
+        a: 'Slightly alkaline. The system uses the calcium and magnesium already present in your water — no chemicals added — to keep the pH balanced.',
+      },
+      {
+        q: 'How often do the cartridges need replacement?',
+        a: 'Most last 6 to 12 months depending on use and source water. We’ll set you up with the schedule that fits your install.',
       },
     ],
   },
+
   'water-testing': {
     slug: 'water-testing',
     title: 'Free Water Testing',
     blurb:
-      'A trained technician comes to your home and tests your water on the spot. No charge.',
+      'We come to your home, collect water samples, and look at where a system would go. Lab testing follows. No charge, no obligation.',
     problem:
-      'You can’t fix what you haven’t tested. Most water problems are invisible — chlorine, hardness, dissolved solids, iron — and the only way to know what’s in your water is to actually measure it.',
+      'You can’t fix what you haven’t tested. Most water issues are invisible — chlorine, hardness, dissolved solids, iron — and the only way to know what’s in your water is to measure it. The first step is getting a sample to our lab and putting eyes on the install site.',
     how: [
       'You book a time that works for you.',
-      'A technician arrives with portable test equipment.',
-      'We test hardness, chlorine, iron, pH, total dissolved solids, and a few markers based on your source.',
-      'You see the results in real time and we explain each one.',
+      'Jay visits your home, listens to your concerns, and collects water samples.',
+      'We walk through where a system would sit if your water needs one.',
+      'Samples go back to the lab for the precise readings — hardness, chlorine, iron, pH, total dissolved solids, and source-specific markers.',
+      'You get the full results with a plain-language explanation and our recommendation.',
     ],
     includes: [
       'In-home visit at your convenience',
-      'Multi-point water testing',
-      'Plain-language explanation',
-      'A written summary you can keep',
-      'No obligation to buy anything',
+      'Water sample collection for lab analysis',
+      'On-site survey of potential install locations',
+      'Plain-language results report',
+      'A specific recommendation — or an honest "you don’t need anything"',
+      'No obligation to buy',
     ],
     fitsHome:
-      'Anyone who hasn’t had their water tested in the last two years — or ever. Required first step before we recommend any system.',
+      'Anyone who hasn’t had their water tested in the last two years — or ever. The required first step before we recommend any system.',
     faqs: [
       {
-        q: 'How long does it take?',
-        a: 'About twenty minutes from setup to results.',
+        q: 'How long does the home visit take?',
+        a: 'Usually 20 to 30 minutes for the consultation, sample collection, and site survey. The lab work happens afterward and the full report follows.',
+      },
+      {
+        q: 'Why don’t you test the water on-site?',
+        a: 'For an accurate picture, we use lab equipment that isn’t mobile. The home visit covers concerns, sampling, and looking at the install site — the precise numbers come back from the lab.',
       },
       {
         q: 'Is it really free?',
-        a: 'Yes. We test for free because half the time the answer is "your water’s fine." That builds trust, and trust builds referrals.',
+        a: 'Yes. We do it for free because half the time the answer is "your water’s fine." That builds trust, and trust is what builds the referrals our business runs on.',
       },
     ],
   },
-  'system-rentals': {
-    slug: 'system-rentals',
-    title: 'System Rentals',
-    blurb: 'Clean water without the upfront cost. Maintenance included.',
+
+  financing: {
+    slug: 'financing',
+    title: 'Financing',
+    blurb:
+      'Cleaner water without the upfront cost. Approved payment plans on installed systems.',
     problem:
-      'Some homes need filtration but can’t justify a several-thousand-dollar install. Renters need clean water too. A rental gets you a professionally maintained system for a low monthly payment.',
+      'A whole-house system pays for itself over time — in appliance life, bottled water saved, and what your skin and hair stop reacting to. But the upfront cost can be the thing that gets in the way of doing the work. We offer financing through approved partners so the day-one number isn’t the deciding factor.',
     how: [
-      'We test your water and recommend a system that fits.',
-      'You sign a simple month-to-month agreement — no long contracts.',
-      'We install the system and include all maintenance.',
-      'Cancel any time. We come pick it up.',
+      'You book a free in-home consultation.',
+      'If a system makes sense for your home, we quote the install.',
+      'We walk through financing options — including budget-friendly monthly payment plans.',
+      'Once approved, the system gets installed with no large upfront payment.',
     ],
     includes: [
-      'Free water test',
-      'Choice of drinking water or RO system',
-      'Installation included',
-      'All filter changes and service included',
-      'Month-to-month, cancel any time',
+      'Pre-approval check through our financing partners',
+      'Transparent monthly payment quote',
+      'The same professional installation as a cash buyer',
+      'Standard ongoing service and support after install',
     ],
     fitsHome:
-      'Renters, short-term homeowners, or anyone who wants to try filtration without a big upfront commitment.',
+      'Homeowners who want filtration but would rather not pay the full install cost on day one — especially for larger whole-house builds.',
     faqs: [
       {
-        q: 'What if my landlord doesn’t allow it?',
-        a: 'Most under-sink units leave no permanent changes. We’ll talk through installation before you commit.',
+        q: 'What credit profiles qualify?',
+        a: 'Most of our customers qualify. We’ll run a soft pre-approval before we get into specifics.',
       },
       {
-        q: 'Can I buy out the rental later?',
-        a: 'Yes — we credit a portion of past payments toward the purchase if you decide to keep it.',
+        q: 'How long are the payment terms?',
+        a: 'Depends on the partner and the install size — typically anywhere from 12 to 84 months.',
+      },
+      {
+        q: 'Are there prepayment penalties?',
+        a: 'Most plans allow early payoff without penalty. We’ll confirm the terms with you before you sign anything.',
       },
     ],
   },

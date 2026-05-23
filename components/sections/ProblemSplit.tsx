@@ -42,7 +42,7 @@ export function ProblemSplit() {
           <SectionHeading
             eyebrow="The Problem"
             title="Your water has a story. We help you hear it."
-            description="Whether you&rsquo;re on city water or pulling from a well, what comes out of your tap isn&rsquo;t the same as what your neighbor drinks. The right system depends on what&rsquo;s actually in yours."
+            description="Whether you’re on city water or pulling from a well, what comes out of your tap isn’t the same as what your neighbor drinks. The right system depends on what’s actually in yours."
           />
         </div>
 
@@ -56,7 +56,7 @@ export function ProblemSplit() {
             </h3>
             <p className="mt-4 text-base leading-relaxed text-charcoal/80">
               Municipal water is treated to keep it safe — but the chemicals used to
-              treat it don&rsquo;t belong in your glass either.
+              treat it don’t belong in your glass either.
             </p>
             <BulletList items={cityWater} />
           </div>
@@ -69,8 +69,8 @@ export function ProblemSplit() {
               Yours alone. Yours to protect.
             </h3>
             <p className="mt-4 text-base leading-relaxed text-charcoal/80">
-              No one is testing well water but you. What&rsquo;s in the ground around
-              your home is what&rsquo;s in your water.
+              No one is testing well water but you. What’s in the ground around
+              your home is what’s in your water.
             </p>
             <BulletList items={wellWater} />
           </div>

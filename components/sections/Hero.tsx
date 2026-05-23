@@ -17,7 +17,7 @@ export function Hero() {
         <div className="lg:col-span-7">
           <EyebrowLabel>Certified Water Specialists · Hogansville, GA</EyebrowLabel>
           <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-6xl lg:text-7xl">
-            Know what you&rsquo;re drinking{' '}
+            Know what you’re drinking{' '}
             <span className="relative inline-block">
               before
               <span
@@ -28,7 +28,7 @@ export function Hero() {
             you drink it.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/80 sm:text-lg">
-            For more than 30 years, Jay Hanlon has been testing Southern water and
+            For more than 30 years, Jay Hanlon has been testing water and
             building filtration systems that fit the home, the family, and the
             problem. No pressure. No guessing. Just answers.
           </p>
@@ -63,7 +63,7 @@ export function Hero() {
               />
               <div className="absolute bottom-0 left-0 right-0 border-t border-stone-300 bg-cream/95 p-5 backdrop-blur">
                 <p className="font-serif text-base leading-tight text-charcoal sm:text-lg">
-                  &ldquo;You can&rsquo;t fix what you haven&rsquo;t tested.&rdquo;
+                  “You can’t fix what you haven’t tested.”
                 </p>
                 <p className="mt-1 text-xs text-stone-600">
                   — Jay Hanlon, Certified Water Specialist

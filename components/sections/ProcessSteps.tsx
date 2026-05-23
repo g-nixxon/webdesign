@@ -4,30 +4,32 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 const steps = [
   {
     n: '01',
-    title: 'Test',
-    body: 'We come to your home with the equipment and test your water on the spot — for hardness, chlorine, iron, pH, and dissolved solids. No charge.',
+    title: 'Visit',
+    body: 'Jay comes to your home, listens to your concerns, collects water samples, and walks through where a system would go if you need one. No charge.',
   },
   {
     n: '02',
-    title: 'Explain',
-    body: 'You see the results in plain language. We walk through what each number means for your family — what to worry about, and what not to.',
+    title: 'Test',
+    body: 'Samples go to the lab for precise readings — hardness, chlorine, iron, pH, total dissolved solids, and source-specific markers. You get the full results in plain language.',
   },
   {
     n: '03',
     title: 'Solve',
-    body: 'If you need a system, we recommend the one that fits your home. If you don&rsquo;t, we tell you that too. No pressure to buy.',
+    body: 'If you need a system, we recommend the one that fits your home. If you don’t, we tell you that too. No pressure to buy.',
   },
 ];
 
 export function ProcessSteps() {
   return (
-    <section className="border-y border-stone-300 bg-stone-100 py-20 sm:py-28">
+    <section className="relative bg-stone-100 py-20 sm:py-28">
+      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-red/70" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-red/70" />
       <Container>
         <div className="max-w-2xl">
           <SectionHeading
             eyebrow="How It Works"
             title="Three steps. Honest answers."
-            description="No high-pressure sales call. No mystery quote. The process is the same every time, because that&rsquo;s the only way it works."
+            description="No high-pressure sales call. No mystery quote. The process is the same every time, because that’s the only way it works."
           />
         </div>
 
@@ -40,10 +42,9 @@ export function ProcessSteps() {
               <h3 className="mt-3 font-serif text-2xl text-charcoal sm:text-3xl">
                 {s.title}
               </h3>
-              <p
-                className="mt-4 max-w-md text-base leading-relaxed text-charcoal/80"
-                dangerouslySetInnerHTML={{ __html: s.body }}
-              />
+              <p className="mt-4 max-w-md text-base leading-relaxed text-charcoal/80">
+                {s.body}
+              </p>
             </li>
           ))}
         </ol>

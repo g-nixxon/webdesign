@@ -15,6 +15,7 @@ const regions = [
     state: 'Georgia',
     cities: [
       'Hogansville (HQ)',
+      'Fitzgerald & Ocilla (largest service area)',
       'LaGrange',
       'Newnan',
       'Carrollton',

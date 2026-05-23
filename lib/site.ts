@@ -3,11 +3,11 @@ export const site = {
   shortName: 'Filter Tech',
   tagline: "Know What You're Drinking Before You Drink It.",
   description:
-    'Free in-home water testing and custom filtration systems for Georgia, North Carolina, South Carolina, Alabama, and North Florida. Family-owned since 2004.',
+    'Free in-home water sampling and custom filtration systems for Georgia, North Carolina, South Carolina, Alabama, and North Florida. Filter Tech Inc. since 2010 — 30+ years in the water filtration trade.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://filtertechinc.com',
   phone: '+17704871066',
   phoneDisplay: '(770) 487-1066',
-  email: 'info@filtertechinc.com',
+  email: 'filtertechinc@gmail.com',
   address: {
     street: '101 Main Street',
     city: 'Hogansville',
@@ -36,36 +36,30 @@ export const services = [
     slug: 'whole-house-filtration',
     title: 'Whole-House Filtration',
     blurb:
-      'Cleaner water at every faucet, shower, and appliance. Removes chlorine, sediment, and the things that make your water taste, smell, or look off.',
-  },
-  {
-    slug: 'drinking-water-systems',
-    title: 'Drinking Water Systems',
-    blurb:
-      'Polished, great-tasting water at the kitchen sink. The final step for what you actually drink and cook with.',
+      'Cleaner water at every faucet, shower, and appliance — at the point water enters your home.',
   },
   {
     slug: 'reverse-osmosis',
     title: 'Reverse Osmosis',
     blurb:
-      'The deepest filtration we install. Strips out dissolved solids most filters leave behind — great for sensitive households.',
+      'Our most popular drinking water system. The deepest filtration we install.',
   },
   {
-    slug: 'alkaline-systems',
-    title: 'Alkaline Systems',
+    slug: 'hydrogen-systems',
+    title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
-      'Adds minerals back after deep filtration for a smoother taste and balanced pH.',
+      'The Delphi H2 Under-Sink Ionizer — filtered water enriched with molecular hydrogen and balanced minerals.',
   },
   {
     slug: 'water-testing',
     title: 'Free Water Testing',
     blurb:
-      'A trained technician comes to your home and tests your water on the spot. No charge, no obligation.',
+      'We come to your home, collect samples, and look at where a system would go. Lab testing follows.',
   },
   {
-    slug: 'system-rentals',
-    title: 'System Rentals',
+    slug: 'financing',
+    title: 'Financing',
     blurb:
-      'Clean water without the upfront cost. Maintenance included. Cancel any time.',
+      'Cleaner water without the upfront cost. Approved payment plans on installed systems.',
   },
 ];

@@ -7,11 +7,11 @@ const faqs: AccordionItem[] = [
     question: 'What’s the difference between whole-house and drinking water systems?',
     answer: (
       <p>
-        A whole-house system treats every faucet, shower, and appliance — it
+        A whole-house system filters every faucet, shower, and appliance — it
         protects your pipes, your skin, and your machines. A drinking water
-        system handles the final polish at one tap, usually the kitchen sink,
-        for the water you actually drink and cook with. Most homes do best
-        with both. We’ll tell you what yours needs.
+        system polishes one tap, usually the kitchen sink, for what you
+        actually drink and cook with. Most homes do best with both. We’ll tell
+        you what yours needs.
       </p>
     ),
   },
@@ -21,8 +21,8 @@ const faqs: AccordionItem[] = [
       <p>
         Most water problems are invisible. Chlorine, dissolved iron, hardness,
         and bacterial byproducts don’t change how water looks. The only way to
-        know what’s in your water is to test it. The good news: we do it for
-        free, in your home, in about twenty minutes.
+        know what’s in your water is to measure it. We do it for free — we
+        come to your home, collect samples, and send them to the lab.
       </p>
     ),
   },
@@ -63,12 +63,13 @@ const faqs: AccordionItem[] = [
     ),
   },
   {
-    question: 'How long does a water test take?',
+    question: 'How long does the home visit take?',
     answer: (
       <p>
-        About twenty minutes. We test for hardness, chlorine, iron, pH, total
-        dissolved solids, and a few other markers depending on whether you’re
-        on city or well. You see the numbers as we go, and we explain each one.
+        Usually 20 to 30 minutes. We listen to your concerns, collect water
+        samples, and walk through where a system would sit if you need one.
+        The precise lab readings come back afterward, and we follow up with
+        the results and our recommendation.
       </p>
     ),
   },
@@ -82,8 +83,8 @@ export function FAQ() {
           <div className="lg:col-span-4">
             <SectionHeading
               eyebrow="Common Questions"
-              title="Plain answers, no jargon."
-              description="The questions we hear most often, the way we’d answer them on your back porch."
+              title="Plain answers."
+              description="The questions we hear most often, answered the way we’d answer them on your back porch."
             />
           </div>
           <div className="lg:col-span-8">

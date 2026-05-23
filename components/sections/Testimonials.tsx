@@ -4,21 +4,21 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 const testimonials = [
   {
     quote:
-      'Jay came out, tested our well, and showed us exactly what was going on. No pressure to buy anything. We ended up with a whole-house system and the water is night and day.',
+      'Jay came out, sampled our well, and showed us exactly what was going on. No pressure to buy anything. We ended up with a whole-house system and the water is night and day.',
     name: 'Linda M.',
     town: 'LaGrange, GA',
     system: 'Whole-House + RO',
   },
   {
     quote:
-      'We&rsquo;d been on city water for years and never thought about it. The test took twenty minutes. The drinking water system Jay installed pays for itself in bottled water alone.',
+      'We’d been on city water for years and never thought about it. Jay walked us through the results and recommended a small RO at the kitchen — pays for itself in bottled water alone.',
     name: 'Robert & Susan T.',
     town: 'Greenville, SC',
-    system: 'Drinking Water System',
+    system: 'Reverse Osmosis',
   },
   {
     quote:
-      'Our iron staining ruined two sets of towels before we called Filter Tech. He fixed it the first time. Annual service has been worth every penny.',
+      'Our iron staining ruined two sets of towels before we called Filter Tech. He fixed it the first time. The service plan has been worth every penny.',
     name: 'Henry P.',
     town: 'Auburn, AL',
     system: 'Whole-House Filtration',
@@ -33,7 +33,7 @@ export function Testimonials() {
           <SectionHeading
             eyebrow="From Our Neighbors"
             title="90% of our work comes from referrals."
-            description="That&rsquo;s not marketing. That&rsquo;s the way it&rsquo;s been for two decades."
+            description="That’s not marketing. That’s the way it’s been for two decades."
           />
         </div>
 

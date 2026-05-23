@@ -152,7 +152,7 @@ export default function ServiceDetailPage({
                 </figure>
               ) : null}
               <div className="rounded-sm border border-stone-300 bg-stone-100 p-7 sm:p-9">
-              <EyebrowLabel>What&rsquo;s Included</EyebrowLabel>
+              <EyebrowLabel>What’s Included</EyebrowLabel>
               <ul className="mt-6 space-y-3">
                 {service.includes.map((item) => (
                   <li
@@ -184,7 +184,7 @@ export default function ServiceDetailPage({
       <FinalCTA
         eyebrow="The next step"
         title="See what your water actually needs."
-        description="Every system we install starts with a free in-home test. We won&rsquo;t recommend anything until we&rsquo;ve seen the results together."
+        description="Every system we install starts with a free in-home test. We won’t recommend anything until we’ve seen the results together."
       />
     </>
   );

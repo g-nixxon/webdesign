@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A water specialist, not a salesman."
-        description="Filter Tech Inc. is owned and operated by Jay Hanlon, a Certified Water Specialist with three decades of experience reading Southern water — and a stubborn belief that the customer should see the test before they hear the price."
+        description="Filter Tech Inc. is owned and operated by Jay Hanlon, a Certified Water Specialist with three decades in the water filtration trade — and a stubborn belief that the customer should see the test before they hear the price."
       />
 
       {/* Family banner */}
@@ -57,7 +57,7 @@ export default function AboutPage() {
               <p>
                 Jay spent his first twelve years as a plumber. He saw firsthand
                 what water does to pipes, fixtures, and water heaters when
-                nobody&rsquo;s filtering it — and what happens when somebody
+                nobody’s filtering it — and what happens when somebody
                 tries to sell a family the wrong fix.
               </p>
               <p>
@@ -65,19 +65,20 @@ export default function AboutPage() {
                 nine years as the operations manager for a national water
                 company in Florida. He learned every system on the market, and
                 more importantly, learned which ones live up to their brochures
-                and which ones don&rsquo;t.
+                and which ones don’t.
               </p>
               <p>
-                In 2004 he joined Filter Tech in Hogansville, Georgia. In 2010
-                he bought it. He&rsquo;s run it ever since with the same
-                philosophy he started with: <em>test first, explain
-                everything, never sell a system you don&rsquo;t need.</em>
+                In 2004 he joined Filter Tech of Georgia, then based in Tyrone.
+                He bought the company in 2010, renamed it Filter Tech Inc., and
+                moved the headquarters to Hogansville in 2019. He’s run it the
+                same way the whole time: <em>test first, explain everything,
+                never sell a system you don’t need.</em>
               </p>
             </div>
 
             <div className="mt-10">
               <PullQuote
-                quote="My favorite test result is the one where the water&rsquo;s fine and I get to drive home without selling anything. That&rsquo;s how you build a business that lasts."
+                quote="My favorite test result is the one where the water’s fine and I get to drive home without selling anything. That’s how you build a business that lasts."
                 cite="Jay Hanlon"
               />
             </div>
@@ -178,69 +179,6 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
-          </div>
-        </Container>
-      </section>
-
-      {/* Trusted Partners */}
-      <section className="bg-cream py-20 sm:py-28">
-        <Container>
-          <div className="max-w-2xl">
-            <EyebrowLabel>Trusted Partners</EyebrowLabel>
-            <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
-              The team you’ll see on the job.
-            </h2>
-            <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
-              We keep our circle small on purpose. The contractors who work
-              alongside Filter Tech have been hand-picked over years — same
-              standards, same way of treating a customer.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:gap-8">
-            <figure className="overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
-              <div className="relative aspect-square">
-                <Image
-                  src="/images/install-lester.jpg"
-                  alt="Lester, a trusted Filter Tech contractor, working on the control panel of a treatment system"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover object-center"
-                />
-              </div>
-              <figcaption className="border-t border-stone-300 p-5">
-                <p className="text-eyebrow font-semibold uppercase tracking-widest text-red">
-                  Trusted Contractor
-                </p>
-                <p className="mt-2 font-serif text-xl text-charcoal">Lester</p>
-                <p className="mt-1 text-sm text-stone-600">
-                  Long-time installation partner on Filter Tech jobs across the
-                  region.
-                </p>
-              </figcaption>
-            </figure>
-
-            <figure className="overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
-              <div className="relative aspect-square">
-                <Image
-                  src="/images/install-duane.jpg"
-                  alt="Duane, owner of A.P. Plumbing, working on the plumbing connections of a Filter Tech installation"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover object-top"
-                />
-              </div>
-              <figcaption className="border-t border-stone-300 p-5">
-                <p className="text-eyebrow font-semibold uppercase tracking-widest text-red">
-                  Trusted Plumber
-                </p>
-                <p className="mt-2 font-serif text-xl text-charcoal">Duane</p>
-                <p className="mt-1 text-sm text-stone-600">
-                  Owner of A.P. Plumbing — our go-to for the plumbing side of
-                  every install.
-                </p>
-              </figcaption>
-            </figure>
           </div>
         </Container>
       </section>

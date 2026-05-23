@@ -55,7 +55,7 @@ export function ContactForm() {
         </div>
         <h3 className="font-serif text-2xl text-charcoal">Got it.</h3>
         <p className="text-base leading-relaxed text-charcoal/85">
-          We&rsquo;ll respond within one business day.
+          We’ll respond within one business day.
         </p>
         <Button variant="secondary" onClick={() => setStatus('idle')}>
           Send another message

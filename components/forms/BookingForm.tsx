@@ -66,7 +66,7 @@ export function BookingForm() {
           <CheckCircle2 size={24} />
         </div>
         <h2 className="font-serif text-2xl text-charcoal sm:text-3xl">
-          Thank you. We&rsquo;ll be in touch shortly.
+          Thank you. We’ll be in touch shortly.
         </h2>
         <p className="text-base leading-relaxed text-charcoal/85">
           A specialist will reach out within one business day to confirm a

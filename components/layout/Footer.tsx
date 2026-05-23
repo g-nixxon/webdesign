@@ -13,7 +13,8 @@ export function Footer() {
           <Logo variant="light" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream/80">
             Family-owned water filtration specialists serving Georgia, the Carolinas,
-            Alabama, and North Florida since 2004.
+            Alabama, and North Florida. Filter Tech Inc. since 2010 — Jay’s
+            been doing this work for 30+ years.
           </p>
           <div className="mt-6 space-y-2 text-sm text-cream/80">
             <a

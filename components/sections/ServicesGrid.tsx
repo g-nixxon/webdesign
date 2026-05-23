@@ -11,7 +11,7 @@ export function ServicesGrid() {
           <SectionHeading
             eyebrow="What We Install"
             title="The right system for the actual problem."
-            description="There&rsquo;s no one-size-fits-all in water. Most homes need one or two of these — never all of them."
+            description="There’s no one-size-fits-all in water. Most homes need one or two of these — never all of them."
           />
         </div>
 
