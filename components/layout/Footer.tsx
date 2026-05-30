@@ -112,7 +112,6 @@ export function Footer() {
           <div className="col-span-2 sm:col-span-1">
             <h4 className="font-serif text-base text-cream">Certifications</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-cream/70">
-              <li>Certified Water Specialist (WQA)</li>
               <li>Certified Installer</li>
               <li>RO / Ultra-filtration Certified</li>
               <li className="pt-2 text-cream/60">{site.hours}</li>

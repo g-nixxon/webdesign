@@ -41,8 +41,8 @@ export function ProblemSplit() {
         <div className="max-w-2xl">
           <SectionHeading
             eyebrow="The Problem"
-            title="Your water has a story. We help you hear it."
-            description="Whether you’re on city water or pulling from a well, what comes out of your tap isn’t the same as what your neighbor drinks. The right system depends on what’s actually in yours."
+            title="Two Types of Water"
+            description="Whether you’re on city water or pulling from a well, what comes out of your tap isn’t the same as what your neighbor drinks. The right system depends on what contaminants reside in your water and what your goals are with a water filtration system."
           />
         </div>
 
@@ -55,8 +55,8 @@ export function ProblemSplit() {
               Treated. Not always clean.
             </h3>
             <p className="mt-4 text-base leading-relaxed text-charcoal/80">
-              Municipal water is treated to keep it safe — but the chemicals used to
-              treat it don’t belong in your glass either.
+              Municipal water is treated according to EPA guidelines, but the
+              chemicals used to treat city water can be harmful to consume.
             </p>
             <BulletList items={cityWater} />
           </div>
@@ -66,7 +66,7 @@ export function ProblemSplit() {
               Well Water
             </p>
             <h3 className="mt-3 font-serif text-2xl text-charcoal sm:text-3xl">
-              Yours alone. Yours to protect.
+              Your Well = Your Responsibility
             </h3>
             <p className="mt-4 text-base leading-relaxed text-charcoal/80">
               No one is testing well water but you. What’s in the ground around

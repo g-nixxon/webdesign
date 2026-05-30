@@ -5,31 +5,29 @@ const steps = [
   {
     n: '01',
     title: 'Visit',
-    body: 'Jay comes to your home, listens to your concerns, collects water samples, and walks through where a system would go if you need one. No charge.',
+    body: 'Filter Tech comes to your home to assess your water and discuss the filtration system that fits your household. Free of charge.',
   },
   {
     n: '02',
     title: 'Test',
-    body: 'Samples go to the lab for precise readings — hardness, chlorine, iron, pH, total dissolved solids, and source-specific markers. You get the full results in plain language.',
+    body: 'We collect water samples and send them to the lab. They’re tested for hardness, chlorine, iron, pH, total dissolved solids, and specific contaminants such as arsenic, radon, and pesticides. Full results back within 48 to 72 hours.',
   },
   {
     n: '03',
-    title: 'Solve',
-    body: 'If you need a system, we recommend the one that fits your home. If you don’t, we tell you that too. No pressure to buy.',
+    title: 'Final Recommendations',
+    body: 'To be clear: everyone benefits from a water filtration system. Our job is to provide as much information as possible and steer you in the right direction.',
   },
 ];
 
 export function ProcessSteps() {
   return (
-    <section className="relative bg-stone-100 py-20 sm:py-28">
-      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-red/70" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-red/70" />
+    <section className="border-y border-stone-300 bg-stone-100 py-20 sm:py-28">
       <Container>
         <div className="max-w-2xl">
           <SectionHeading
-            eyebrow="How It Works"
-            title="Three steps. Honest answers."
-            description="No high-pressure sales call. No mystery quote. The process is the same every time, because that’s the only way it works."
+            eyebrow="How We Find the Right System for You"
+            title="Our Simple Process."
+            description="No high-pressure sales call. No random quotes. In three steps, we give you the honest answers you need."
           />
         </div>
 

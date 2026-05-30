@@ -1,7 +1,7 @@
 import { Container } from '@/components/layout/Container';
 
 const items = [
-  'Certified Water Specialist (WQA)',
+  'Water Specialists',
   '30+ Years in Water Filtration',
   '1,200+ Homes Served',
   '90% Referral Business',

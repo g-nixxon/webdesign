@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A water specialist, not a salesman."
-        description="Filter Tech Inc. is owned and operated by Jay Hanlon, a Certified Water Specialist with three decades in the water filtration trade — and a stubborn belief that the customer should see the test before they hear the price."
+        description="Filter Tech Inc. is owned and operated by Jay Hanlon, a water specialist with three decades in the water filtration trade — and a stubborn belief that the customer should see the test before they hear the price."
       />
 
       {/* Family banner */}
@@ -118,7 +118,6 @@ export default function AboutPage() {
                   Certifications
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-charcoal">
-                  <li>Certified Water Specialist (WQA)</li>
                   <li>Certified Installer</li>
                   <li>RO / Ultra-filtration Certified</li>
                 </ul>

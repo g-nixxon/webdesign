@@ -15,7 +15,7 @@ export function Hero() {
       />
       <Container className="relative grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-12 lg:py-32">
         <div className="lg:col-span-7">
-          <EyebrowLabel>Certified Water Specialists · Hogansville, GA</EyebrowLabel>
+          <EyebrowLabel>Water Specialists · Hogansville, GA</EyebrowLabel>
           <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-6xl lg:text-7xl">
             Know what you’re drinking{' '}
             <span className="relative inline-block">
@@ -63,10 +63,10 @@ export function Hero() {
               />
               <div className="absolute bottom-0 left-0 right-0 border-t border-stone-300 bg-cream/95 p-5 backdrop-blur">
                 <p className="font-serif text-base leading-tight text-charcoal sm:text-lg">
-                  “You can’t fix what you haven’t tested.”
+                  “If you don’t have a filter, you are the filter.”
                 </p>
                 <p className="mt-1 text-xs text-stone-600">
-                  — Jay Hanlon, Certified Water Specialist
+                  — Jay Hanlon, Water Specialist
                 </p>
               </div>
             </div>
