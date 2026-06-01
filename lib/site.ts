@@ -42,7 +42,7 @@ export const services = [
     slug: 'reverse-osmosis',
     title: 'Reverse Osmosis',
     blurb:
-      'Our most popular drinking water system. The deepest filtration we install.',
+      'One of our most popular drinking water systems. The same filtration hospitals, labs, and bottling plants rely on, right at your kitchen sink.',
   },
   {
     slug: 'hydrogen-systems',

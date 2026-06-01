@@ -80,7 +80,8 @@ export const serviceContent: Record<string, ServiceContent> = {
     slug: 'reverse-osmosis',
     title: 'Reverse Osmosis Drinking Water',
     blurb:
-      'Our most popular drinking water system. The same filtration hospitals, labs, and bottling plants rely on — at your kitchen sink.',
+      'One of our most popular drinking water systems. The same filtration hospitals, labs, and bottling plants rely on, right at your kitchen sink.',
+    problemHeading: 'What this system solves',
     problem:
       'City water is treated to be safe, not pure. Even after treatment, what comes through your tap can carry chlorine and chloramine, heavy metals, PFAS, and disinfection byproducts like trihalomethanes (THMs) and haloacetic acids (HAAs). Add to that the practical realities — mains break, pipes corrode, boil-water alerts happen. Reverse Osmosis is what hospitals, labs, and bottling plants use when they need water they can count on.',
     how: [
@@ -101,6 +102,14 @@ export const serviceContent: Record<string, ServiceContent> = {
     fitsHome:
       'Homes with high TDS readings, well water, or family members with sensitivities. The default for anyone who wants the cleanest possible drinking water at the kitchen sink — and the right call for households worried about PFAS, lead, or boil-water alerts.',
     faqs: [
+      {
+        q: 'Why does the RO come with a different faucet?',
+        a: 'Because the reverse osmosis system is generating its own water on site. A dedicated faucet is tied directly to the RO unit, providing 1 to 2 gallons of purified water on demand.',
+      },
+      {
+        q: 'Why do I need an RO system if I can just buy bottled water?',
+        a: 'Great question — two reasons we recommend a system. First, an RO unit makes fresh water daily, on demand. It isn’t stored in a bottle sitting on a shelf for who knows how long. Second, you stop wasting water and money on bottled water — no more half-full bottles lying around the house. You walk up to the faucet and use the RO as needed for drinking and cooking.',
+      },
       {
         q: 'How much does it actually remove?',
         a: 'Total dissolved solids drop between 90 and 99 percent. We can show you the reading on a TDS meter before and after — it’s the cleanest demonstration of how the system works.',
