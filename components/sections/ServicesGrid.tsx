@@ -3,17 +3,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
 import { services } from '@/lib/site';
 
-// On the homepage, only show the installable systems.
-// Water Testing and Financing live on their own pages.
-const HOMEPAGE_SLUGS = new Set([
-  'whole-house-filtration',
-  'reverse-osmosis',
-  'hydrogen-systems',
-]);
-
 export function ServicesGrid() {
-  const homepageServices = services.filter((s) => HOMEPAGE_SLUGS.has(s.slug));
-
   return (
     <section className="border-y border-stone-300 bg-stone-100 py-20 sm:py-28">
       <Container>
@@ -26,7 +16,7 @@ export function ServicesGrid() {
         </div>
 
         <div className="mt-12 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
-          {homepageServices.map((s) => (
+          {services.map((s) => (
             <Card
               key={s.slug}
               title={s.title}

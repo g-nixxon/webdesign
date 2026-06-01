@@ -31,6 +31,10 @@ export const nav = [
   { href: '/contact', label: 'Contact' },
 ];
 
+// Publicly listed services — drives the homepage grid, services hub, footer,
+// and sitemap. Water Testing and Financing content still lives in
+// services-data.ts and their detail URLs still resolve, but they're not
+// surfaced in any list right now (they'll be moved to dedicated pages later).
 export const services = [
   {
     slug: 'whole-house-filtration',
@@ -49,17 +53,5 @@ export const services = [
     title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
       'Filtered, ionized water enriched with molecular hydrogen — the Delphi H2 by AlkaViva, installed at your kitchen sink for daily antioxidant-rich drinking water.',
-  },
-  {
-    slug: 'water-testing',
-    title: 'Free Water Testing',
-    blurb:
-      'We come to your home, collect samples, and look at where a system would go. Lab testing follows.',
-  },
-  {
-    slug: 'financing',
-    title: 'Financing',
-    blurb:
-      'Cleaner water without the upfront cost. Approved payment plans on installed systems.',
   },
 ];
