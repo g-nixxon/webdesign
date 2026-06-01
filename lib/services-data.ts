@@ -15,6 +15,9 @@ export interface ServiceContent {
   faqs: { q: string; a: string }[];
   bannerImage?: ServiceImage;
   asideImage?: ServiceImage;
+  problemHeading?: string;
+  howHeading?: string;
+  fitsHomeHeading?: string;
 }
 
 export const serviceContent: Record<string, ServiceContent> = {
@@ -23,51 +26,49 @@ export const serviceContent: Record<string, ServiceContent> = {
     title: 'Whole-House Filtration',
     blurb:
       'Cleaner, conditioned water at every faucet, shower, and appliance — at the point water enters your home.',
+    problemHeading: 'What our whole-house system solves',
     problem:
-      'A whole-house system filters water before it ever reaches a tap. That matters because what comes through the main line isn’t just one thing — it can be chlorine and chloramine from city treatment, disinfection byproducts (THMs and HAAs), traces of lead from old plumbing, PFAS, sediment from well water, or the hardness that scales appliances and dries out skin. We size and stack a system to fit what your water is actually carrying.',
+      'A whole-house system filters water before it ever reaches a tap. That matters because what comes through the main line isn’t just one thing — it can be chlorine and chloramine from city treatment, disinfection byproducts (THMs and HAAs), traces of lead from old plumbing, PFAs, sediment from well water, or the hardness that scales appliances and dries out skin. We size and stack a system to fit what your water is actually carrying.',
+    howHeading: 'How this system works',
     how: [
       'Water enters your home through a single main line.',
-      'We install a multi-stage filter sized to your home’s flow rate. Common stages: activated carbon for chlorine, taste, and VOCs; certified lead-reduction media when the testing calls for it; and — when hardness is the issue — a softener or conditioner.',
+      'We install a multi-stage filter sized to your home’s flow rate. Common stages: catalytic carbon for chlorine, taste, and VOCs; certified lead-reduction media when the testing calls for it; and — when hardness is the issue — a softener or conditioner.',
       'Two softening options: a traditional ion-exchange softener (resin beads regenerated with a salt brine cycle), or a salt-free conditioner using Template Assisted Crystallization (TAC) — no salt, no waste water, low maintenance.',
       'The right combination depends on the lab results from your free in-home water test.',
     ],
     includes: [
+      'PDF Files describing your specific system. Solutions made simple.',
       'Free in-home consultation and water sample collection',
-      'Pre-filter housing and media sized to your home',
-      'Activated carbon for chlorine, taste, and VOCs',
-      'Certified lead-reduction stage when the water calls for it',
+      'Catalytic carbon for chlorine, taste, and VOCs',
+      'Special systems for unique problems',
       'Softener or salt-free conditioner when hardness is the issue',
       'Professional installation by a Certified Installer',
     ],
+    fitsHomeHeading: 'Every home benefits from a filter',
     fitsHome:
-      'Homes on city water dealing with chlorine, taste, or disinfection byproduct concerns. Homes on well water dealing with sediment, iron, or staining. Any home where hard water is wrecking appliances or making showers feel rough. Best fit for families who want one solution covering the whole house — every shower, every appliance, every tap.',
+      'Every home benefits from filtered water — period. A whole-house system is the right move when you want that protection to cover every faucet, shower, and appliance, not just the kitchen tap. It handles the bulk of what comes through the main line — chlorine, sediment, hardness, taste — at the source, so what reaches each room is already cleaner.',
     faqs: [
       {
         q: 'Will it slow my water pressure?',
         a: 'A properly sized whole-house system has no noticeable pressure drop. We measure your flow rate before recommending a size.',
       },
       {
-        q: 'Salt softener or salt-free conditioner — which do I need?',
-        a: 'Depends on your water. Ion-exchange softeners completely remove hardness — best for very hard water and homes where appliance protection is the priority. Salt-free TAC conditioners prevent scale without removing minerals — easier to maintain, no waste water, but the water is technically still hard. The lab results tell us which one fits.',
+        q: 'How long before we notice a difference in our water?',
+        a: 'Most systems show a significant difference immediately.',
       },
       {
-        q: 'Will it remove PFAS?',
-        a: 'Carbon-based whole-house filtration removes a meaningful portion of PFAS. For the highest reduction levels, we recommend pairing the whole-house system with a Reverse Osmosis unit at the kitchen for drinking water.',
+        q: 'Will it remove harmful chemicals (PFAs)?',
+        a: 'Carbon-based whole-house filtration removes a meaningful portion of PFAs. For the highest reduction levels, we recommend pairing the whole-house system with a Reverse Osmosis unit at the kitchen for drinking water.',
       },
       {
         q: 'How often does it need service?',
         a: 'Once a year for most homes. Heavy iron or sediment loads may need a six-month check. We’ll tell you what yours needs.',
       },
       {
-        q: 'Do I still need a drinking water system at the kitchen?',
-        a: 'Often yes. Whole-house handles the bulk problems; an under-sink Reverse Osmosis or Hydrogen system polishes the water you actually drink.',
+        q: 'Do I still need a drinking water system if I have a whole-house system?',
+        a: 'Often yes. Whole-house systems handle the bulk of problems that stem from bad water while maintaining the pressure and flow rate across the home. A drinking water system is more effective at removing contaminants through reverse osmosis, which filters at the micron level.',
       },
     ],
-    bannerImage: {
-      src: '/images/install-james.jpg',
-      alt: 'Jay Hanlon installing a whole-house filtration system — adjusting the control valve above the filter tanks',
-      caption: 'A whole-house install in progress',
-    },
     asideImage: {
       src: '/images/system-whole-house.jpg',
       alt: 'Finished whole-house filtration installation with twin tanks, brine reservoir, and UV light',

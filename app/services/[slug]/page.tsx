@@ -75,18 +75,16 @@ export default function ServiceDetailPage({
       <section className="bg-cream py-20 sm:py-28">
         <Container className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-8">
-            <EyebrowLabel>The Problem</EyebrowLabel>
-            <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
-              What this solves
+            <h2 className="font-serif text-2xl text-red sm:text-3xl">
+              {service.problemHeading ?? 'What this solves'}
             </h2>
-            <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
+            <p className="mt-4 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
               {service.problem}
             </p>
 
             <div className="mt-14">
-              <EyebrowLabel>How It Works</EyebrowLabel>
-              <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
-                Step by step
+              <h2 className="font-serif text-2xl text-red sm:text-3xl">
+                {service.howHeading ?? 'How this system works'}
               </h2>
               <ol className="mt-6 space-y-4">
                 {service.how.map((step, i) => (
@@ -106,19 +104,17 @@ export default function ServiceDetailPage({
             </div>
 
             <div className="mt-14">
-              <EyebrowLabel>Who This Is For</EyebrowLabel>
-              <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
-                Homes that benefit most
+              <h2 className="font-serif text-2xl text-red sm:text-3xl">
+                {service.fitsHomeHeading ?? 'Who this is for'}
               </h2>
-              <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
+              <p className="mt-4 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
                 {service.fitsHome}
               </p>
             </div>
 
             <div className="mt-14">
-              <EyebrowLabel>Common Questions</EyebrowLabel>
-              <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
-                FAQ
+              <h2 className="font-serif text-2xl text-red sm:text-3xl">
+                Common Questions
               </h2>
               <div className="mt-6">
                 <Accordion
