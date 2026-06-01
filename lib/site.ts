@@ -48,7 +48,7 @@ export const services = [
     slug: 'hydrogen-systems',
     title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
-      'The Delphi H2 Under-Sink Ionizer — filtered water enriched with molecular hydrogen and balanced minerals.',
+      'Filtered, ionized water enriched with molecular hydrogen — the Delphi H2 by AlkaViva, installed at your kitchen sink for daily antioxidant-rich drinking water.',
   },
   {
     slug: 'water-testing',

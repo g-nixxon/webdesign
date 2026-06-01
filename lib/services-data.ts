@@ -134,23 +134,25 @@ export const serviceContent: Record<string, ServiceContent> = {
     slug: 'hydrogen-systems',
     title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
-      'The Delphi H2 Under-Sink Water Ionizer — filtered, ionized water enriched with molecular hydrogen and balanced minerals.',
+      'The Delphi H2 by AlkaViva — an under-sink ionizer that filters your water, raises the pH naturally with calcium and magnesium, and infuses every glass with dissolved molecular hydrogen for the antioxidant benefits backed by a growing body of peer-reviewed research.',
+    problemHeading: 'What this system solves',
     problem:
-      'Filtration gets your water to clean. The Delphi H2 Under-Sink Water Ionizer takes the next step: it ionizes filtered water and enriches it with molecular hydrogen (H₂) — the compound at the center of more than a thousand peer-reviewed studies on antioxidant, recovery, and inflammation benefits. For customers already taking supplements for similar reasons, it’s a way to get those benefits from the water they’re drinking anyway.',
+      'Filtration gets your water clean. The Delphi H2 by AlkaViva takes the next step. After multi-stage pre-filtration, an ionization cell uses electrolysis to raise the pH naturally into a slightly alkaline range (typically 8.5 to 9.5) — using the calcium and magnesium already present in your water — and infuses every glass with dissolved molecular hydrogen (H₂). H₂ is the compound at the center of more than a thousand peer-reviewed studies on antioxidant function, recovery, and inflammation. The dedicated faucet delivers multiple modes: alkaline water for drinking, neutral water for everyday use, and acidic water for cleaning and skincare. For health-conscious customers already taking supplements for similar reasons, it’s a way to get those benefits from water they’re drinking anyway.',
     how: [
-      'Water enters the Delphi unit and passes through built-in multi-stage pre-filtration — no separate RO required.',
-      'The ionization stage enriches the water with dissolved molecular hydrogen (H₂).',
-      'Naturally occurring calcium and magnesium are preserved in the finished water, supporting a balanced (slightly alkaline) pH.',
-      'Hydrogen-enriched water is delivered to a dedicated faucet at the kitchen sink.',
+      'Water enters the Delphi H2 through built-in multi-stage pre-filtration — sediment, chlorine, and other contaminants are stripped out before the next stage.',
+      'An ionization cell uses electrolysis to split the filtered water, raising the pH naturally and producing dissolved molecular hydrogen (H₂) at the same time.',
+      'Naturally occurring calcium and magnesium are preserved in the finished water, supporting that slightly alkaline pH without any added minerals or chemicals.',
+      'A dedicated under-sink faucet delivers your water in the mode you select — alkaline for drinking, neutral, or acidic for cleaning and skincare.',
     ],
     includes: [
       'Free in-home consultation and water sample',
-      'Delphi H2 Under-Sink Water Ionizer',
+      'Delphi H2 Under-Sink Water Ionizer by AlkaViva',
       'Built-in multi-stage pre-filtration',
-      'Dedicated kitchen faucet',
+      'Dedicated kitchen faucet with multiple water modes',
       'Professional installation under the sink',
       'Scheduled filter replacement reminders',
     ],
+    fitsHomeHeading: 'Who this is for',
     fitsHome:
       'Health-conscious households who want their drinking water to do more than be clean — particularly people already taking antioxidant or recovery supplements who’d rather get the same benefits from water they’re drinking anyway. Common pick among athletes managing inflammation and recovery.',
     faqs: [
@@ -159,18 +161,23 @@ export const serviceContent: Record<string, ServiceContent> = {
         a: 'Molecular hydrogen (H₂) acts as a selective antioxidant — it targets the free radicals tied to oxidative stress while leaving healthy molecules alone. Research has explored its role in ATP production, lactic acid reduction, and inflammation. We don’t make medical promises; we install the systems the research is pointing at.',
       },
       {
-        q: 'Does it need an RO system upstream?',
-        a: 'No. The Delphi unit has its own multi-stage pre-filtration. Some customers pair it with an RO if they want the deepest possible filtration before the ionization step, but it isn’t required.',
+        q: 'What’s the difference between this and an RO system?',
+        a: 'An RO system forces water through a semi-permeable membrane to strip out dissolved solids — that’s the deepest filtration we install, and the trade-off is that minerals come out along with everything else. The Delphi H2 takes a different path: it filters your water, ionizes it to raise the pH naturally, and adds dissolved molecular hydrogen at point of use — while preserving the calcium and magnesium already in your water. So an RO is about pure, contaminant-free water. The Delphi H2 is about filtered water that’s also doing more: supporting hydration, recovery, and antioxidant function. Some customers install both — RO for the deepest purity, Delphi H2 for the active benefits.',
       },
       {
         q: 'What’s the pH of the finished water?',
-        a: 'Slightly alkaline. The system uses the calcium and magnesium already present in your water — no chemicals added — to keep the pH balanced.',
+        a: 'Slightly alkaline — typically in the 8.5 to 9.5 range. The system uses the calcium and magnesium already present in your water — no chemicals added — to keep the pH balanced.',
       },
       {
         q: 'How often do the cartridges need replacement?',
-        a: 'Most last 6 to 12 months depending on use and source water. We’ll set you up with the schedule that fits your install.',
+        a: 'The Delphi H2 has multiple filter stages — typically a sediment pre-filter and a carbon/multi-media block. Each stage lasts 6 to 12 months depending on how much water your household uses and what’s coming out of your source. We set you up with a replacement schedule fitted to your specific install, and we send you reminders when each one is due — you won’t have to track it yourself. If you ever notice a change in taste, pressure, or the unit’s display readings, give us a call and we’ll come out to check things over. Replacing the filters is the only routine maintenance the system requires.',
       },
     ],
+    asideImage: {
+      src: '/images/delphi-h2.jpg',
+      alt: 'The Delphi H2 by AlkaViva — an under-sink alkaline-hydrogen water ionizer, installed in a customer kitchen cabinet',
+      caption: 'The Delphi H2 by AlkaViva',
+    },
   },
 
   'water-testing': {
