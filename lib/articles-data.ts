@@ -18,16 +18,16 @@ export const articles: Article[] = [
     body: [
       {
         paragraph:
-          'If you live in town, your water comes from a treatment plant. If you live in the country, it likely comes from a well in your own yard. Both can be perfectly safe — and both can have problems that the other doesn’t.',
+          'Before we get into the differences, the foundation: all water starts in the ground. Every drop you drink — whether it came from a city treatment plant or a well in your own yard — originated as groundwater. City water is, in a sense, well water that’s been treated with chemicals on its way to you.',
       },
-      { heading: 'City water: treated, but not pure' },
+      { heading: 'City water: treated with chemicals' },
       {
         paragraph:
-          'Municipal water is treated to kill bacteria and stop disease — usually with chlorine or chloramine. That treatment is doing important work. But chlorine doesn’t disappear once it’s done its job. It comes through your tap. It also reacts with naturally occurring organics in water to form disinfection byproducts (DBPs) like trihalomethanes — which some studies link to long-term health concerns.',
+          'Municipal water is treated to kill bacteria and stop disease — usually with chlorine or chloramine. That treatment is doing important work. But the chemicals don’t disappear once they’ve done the job. They come right through your tap. Chlorine also reacts with naturally occurring organics in the water to form disinfection byproducts (DBPs) like trihalomethanes — which some studies link to long-term health concerns.',
       },
       {
         paragraph:
-          'On top of that, city water travels through miles of pipes to reach your home. Older pipes can pick up sediment, rust, or even traces of lead. The treatment plant doesn’t control that part.',
+          'On top of that, city water travels miles of pipes to reach your home. Older pipes can pick up sediment, rust, or even traces of lead. The treatment plant doesn’t control that part.',
       },
       { heading: 'Well water: yours alone' },
       {
@@ -49,7 +49,7 @@ export const articles: Article[] = [
       { heading: 'How to choose a filter' },
       {
         paragraph:
-          'The short answer: test first. The longer answer: a city home and a well home will almost always need different setups. A whole-house carbon filter is great for chlorine — but it does nothing for well iron staining. A reverse-osmosis system handles dissolved solids — but you don’t need one if your TDS reading is already low.',
+          'The short answer: test first. The longer answer: a city home and a well home almost always need different setups. A catalytic carbon filter is great for chlorine, which makes it the right call for most city homes — but it’s seldom the answer for well water dealing with iron staining. A reverse-osmosis system handles dissolved solids at a .0005 micron removal rating, but you don’t need one if your TDS reading is already low.',
       },
       {
         paragraph:
@@ -61,13 +61,21 @@ export const articles: Article[] = [
     slug: '7-signs-your-water-needs-testing',
     title: '7 Signs Your Water Needs Testing',
     excerpt:
-      'You don’t need a lab to suspect a problem. Here are the everyday signs that mean it’s time to test.',
+      'Clear water and no off-taste don’t mean safe water. Here are the everyday signs that mean it’s time to test — and the invisible reasons it’s worth testing even when nothing seems wrong.',
     readMinutes: 4,
     category: 'Diagnostics',
     body: [
       {
         paragraph:
-          'Water problems usually show up before anyone notices. By the time you taste it, smell it, or see it, the issue has been around a while. Here are seven everyday signs we hear about most.',
+          'Here’s the honest answer up front: everyone can benefit from a water filtration system. Just because your water is clear and has no strange "off" taste doesn’t mean it’s completely safe to drink.',
+      },
+      {
+        paragraph:
+          'Some of the most concerning contaminants — Arsenic and Radon, for example — are tasteless and clear to the human eye. You won’t notice them. That’s why we always recommend testing your water first.',
+      },
+      {
+        paragraph:
+          'Even so, there are everyday signs that make testing more urgent. If you notice any of these, give us a call.',
       },
       { heading: '1. Spots on glassware and dishes' },
       {
@@ -92,7 +100,7 @@ export const articles: Article[] = [
       { heading: '5. A rotten-egg smell' },
       {
         paragraph:
-          'Hydrogen sulfide. Common in well water. Often gets worse over time. Treatable but needs the right system.',
+          'Hydrogen sulfide. Common in well water. Often gets worse over time. Treatable, but it needs the right system.',
       },
       { heading: '6. Water that tastes "off"' },
       {
@@ -110,13 +118,13 @@ export const articles: Article[] = [
     slug: 'how-reverse-osmosis-actually-works',
     title: 'How a Reverse Osmosis System Actually Works',
     excerpt:
-      'No mystery, no marketing — just the actual physics, explained simply.',
+      'The actual physics, explained simply — plus why Filter Tech pairs every RO unit with a post-alkaline cartridge.',
     readMinutes: 6,
     category: 'How It Works',
     body: [
       {
         paragraph:
-          'Reverse osmosis is the deepest filtration technology used in homes. It can pull out things that ordinary filters can’t touch — dissolved salts, metals, even some pharmaceutical residue. Here’s the simple version.',
+          'Reverse osmosis is the deepest filtration technology used in homes. The membrane works at a .0005 micron removal rating — fine enough to pull out things ordinary filters can’t touch, including dissolved salts, metals, and many pharmaceutical residues. Here’s the simple version.',
       },
       { heading: 'Start with osmosis' },
       {
@@ -131,21 +139,26 @@ export const articles: Article[] = [
       { heading: 'The full stack' },
       {
         paragraph:
-          'A real-world RO system has multiple stages because the membrane is delicate. A typical setup:',
+          'A real-world RO system has multiple stages, because the membrane is delicate and needs protection on both sides. A typical Filter Tech setup:',
       },
       {
         list: [
           'Sediment pre-filter — keeps grit out of the membrane',
           'Carbon pre-filter — strips chlorine that would damage the membrane',
-          'RO membrane — the deep filtration step',
+          'RO membrane — .0005 micron removal rating, the deep filtration step',
           'Storage tank — holds clean water for instant use',
           'Carbon post-filter — final polish before the faucet',
+          'Post-alkaline cartridge — adds calcium and magnesium back for taste and balanced pH',
         ],
       },
       { heading: 'What it removes — and what it doesn’t' },
       {
         paragraph:
-          'RO removes the vast majority of total dissolved solids: salts, lead, fluoride, nitrates, arsenic, and many other contaminants. It does not sterilize water — you still need pre-treatment for bacteria. And because it removes minerals along with contaminants, some people pair RO with an alkaline post-filter to add minerals back.',
+          'RO removes the vast majority of total dissolved solids: salts, lead, fluoride, nitrates, arsenic, and many other contaminants. It does not sterilize water — pre-treatment is still needed for bacterial concerns.',
+      },
+      {
+        paragraph:
+          'Because the membrane strips minerals out along with everything else, Filter Tech includes a post-alkaline cartridge with our RO unit by default. It puts the healthy minerals — calcium and magnesium — back in after filtration, so you get pure water with the taste and pH balance of spring water. No flatness, no chemicals added.',
       },
     ],
   },
@@ -153,25 +166,25 @@ export const articles: Article[] = [
     slug: 'why-annual-maintenance-matters',
     title: 'Why Annual Maintenance Matters',
     excerpt:
-      'A filter that isn’t maintained eventually starts feeding contaminants back into your water. Here’s why service isn’t optional.',
+      'A filter that isn’t maintained eventually slows down — and in some cases starts letting contaminants back through. Service isn’t optional.',
     readMinutes: 4,
     category: 'Maintenance',
     body: [
       {
         paragraph:
-          'A water filter does one job: it traps things you don’t want in your water. Every gallon you use pushes more contaminants into that trap. Eventually it fills up.',
+          'To maintain efficiency, every filter system should be checked and serviced annually. That’s the rule. A water filter does one job: it traps things you don’t want in your water. Every gallon you use pushes more contaminants into that trap. Eventually it fills up.',
       },
       { heading: 'A full filter doesn’t fail loudly' },
       {
         paragraph:
-          'There’s no warning light. Pressure stays the same. The water still looks clear. But the filter has stopped working — and in some cases can start letting old captured contaminants back through.',
+          'There’s no warning light. Pressure stays close to the same. The water still looks clear. There are a few warning signs — low pressure, return of staining — but usually a filter that isn’t serviced will just slowly stop working. And in some cases, a saturated filter can start letting contaminants back through.',
       },
       { heading: 'What annual service actually includes' },
       {
         list: [
           'Replacing cartridges before they’re overloaded',
-          'Inspecting housings, fittings, and O-rings for slow leaks',
-          'Testing the finished water to confirm performance',
+          'Inspecting valves, programming, and O-rings for slow leaks or drift',
+          'Grabbing a sample of finished water to test efficiency',
           'Checking pressure and flow rates against the install baseline',
         ],
       },
@@ -186,13 +199,13 @@ export const articles: Article[] = [
     slug: 'whole-house-vs-point-of-use',
     title: 'Whole-House vs. Point-of-Use: Which Do You Need?',
     excerpt:
-      'They solve different problems. Most homes need one. Some need both.',
+      'They solve different problems. Every house benefits from at least one. Most end up choosing both.',
     readMinutes: 5,
     category: 'Buying Guide',
     body: [
       {
         paragraph:
-          'When people ask "should I get a whole-house system or just a kitchen filter?" the honest answer is "it depends on what you’re trying to fix."',
+          'The honest answer is yes — to both. Whole-house systems and point-of-use systems solve different problems. Every house can benefit from at least one of them. And most houses, once they think about it, end up choosing both to ensure the cleanest and safest water possible.',
       },
       { heading: 'Whole-house systems' },
       {
@@ -204,32 +217,32 @@ export const articles: Article[] = [
       },
       {
         list: [
-          'Chlorine removal (so it’s out of your showers too)',
+          'Iron staining or sulfur smells throughout the house',
+          'Chlorine removal at every faucet and shower',
           'Sediment that affects laundry and appliances',
           'Hardness that scales fixtures and water heaters',
-          'Iron staining throughout the house',
         ],
       },
       { heading: 'Point-of-use systems' },
       {
         paragraph:
-          'A point-of-use system filters at a single tap — usually the kitchen sink. Drinking water systems and reverse osmosis units are both point-of-use.',
+          'A point-of-use system filters at a single tap — usually the kitchen sink. Drinking water systems, reverse osmosis units, and alkaline-hydrogen systems are all point-of-use.',
       },
       {
         paragraph: 'Best for:',
       },
       {
         list: [
-          'Removing dissolved solids that affect taste',
-          'Polishing water you drink and cook with',
-          'Removing specific contaminants (lead, arsenic, nitrates)',
-          'Lower-budget setups, or rentals',
+          'Removing specific contaminants — lead, chlorine, arsenic, nitrates',
+          'Polishing the water you drink and cook with',
+          'Lower cost per gallon compared to bottled water',
+          'Households without a whole-house budget yet',
         ],
       },
       { heading: 'The combination' },
       {
         paragraph:
-          'In most homes, the best result comes from a whole-house unit handling the bulk problems and a point-of-use system polishing the kitchen tap. The whole-house unit protects the point-of-use system’s filters from getting overloaded, and the point-of-use system handles the things the whole-house unit can’t.',
+          'In most homes, the best result comes from running both. The whole-house unit handles the bulk problems at the main line and protects the point-of-use system from getting overloaded. The point-of-use system polishes the kitchen tap and tackles the contaminants the whole-house unit can’t reach. Together, that’s the cleanest, safest water this side of the source.',
       },
     ],
   },
