@@ -59,9 +59,9 @@ export default function ContactPage() {
               We answer every message.
             </h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
-              If Jay reads them, so do we. Within 48 hours, someone from our
-              team will be in contact with you to ensure you have as much
-              information about your water as possible.
+              Within 48 hours, someone from our team will be in contact with
+              you to ensure you have as much information about your water as
+              possible.
             </p>
 
             <dl className="mt-10 space-y-6">

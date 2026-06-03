@@ -69,7 +69,7 @@ export function BookingForm() {
           Thank you. We’ll be in touch shortly.
         </h2>
         <p className="text-base leading-relaxed text-charcoal/85">
-          A specialist will reach out within one business day to confirm a
+          A specialist will reach out within 1–2 business days to confirm a
           time that works for you. If your situation is urgent, please call us
           directly.
         </p>

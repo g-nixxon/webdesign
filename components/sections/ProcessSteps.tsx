@@ -25,9 +25,9 @@ export function ProcessSteps() {
       <Container>
         <div className="max-w-2xl">
           <SectionHeading
-            eyebrow="How We Find the Right System for You"
+            eyebrow="What our visit looks like"
             title="Our Simple Process."
-            description="No high-pressure sales call. No random quotes. In three steps, we give you the honest answers you need."
+            description="Here’s exactly what happens when Filter Tech comes to your home, from the first knock on the door to the final recommendation. No high-pressure sales call. No random quotes. Just three honest steps."
           />
         </div>
 

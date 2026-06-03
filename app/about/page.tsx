@@ -158,7 +158,7 @@ export default function AboutPage() {
                 },
                 {
                   title: 'Recommend what fits.',
-                  body: 'Sometimes that’s a $4,000 whole-house system. Sometimes it’s a $400 cartridge. We tell you which.',
+                  body: 'Sometimes that’s a whole-house system. Sometimes it’s a single cartridge. We tell you which.',
                 },
                 {
                   title: 'Stand behind it.',
