@@ -1,96 +1,74 @@
 import fs from 'fs';
 import path from 'path';
 import { cn } from '@/lib/cn';
+import {
+  customerLocations,
+  TOTAL_INSTALLS,
+  STATES_WITH_INSTALLS,
+  type CustomerLocation,
+} from '@/lib/customer-locations';
 
 /**
- * A customer location for the map.
+ * The map renders customer pins on a stylized US states SVG.
  *
- * Coordinates are SVG units inside the map's `viewBox` ("0 0 959 593").
- * The US lower-48 (plus AK and HI) is drawn into that space using paths
- * from Wikimedia Commons' public-domain "Blank US Map (states only)" SVG.
+ * Pin coordinates come from `lib/customer-locations.ts`, which is
+ * AUTO-GENERATED from the master customer CSV by `scripts/build-customer-map.py`.
+ * Customer PII (names, addresses, phones, emails) never leaves that script —
+ * only aggregated (city, state, count, SVG x/y) reach this file.
  *
- * When the CEO's customer CSV is ready, we'll either:
- *  (a) pre-compute SVG coords per row (works with this same component), or
- *  (b) upgrade this map to a real geo library (e.g. react-simple-maps) and
- *      project from lat/lng instead — the data shape stays the same.
+ * Regenerate after adding new customers by re-running the python script.
  */
-export interface Customer {
-  city: string;
-  state: 'GA' | 'AL' | 'NC' | 'FL' | 'SC' | 'TN' | 'NY' | 'TX';
-  x: number; // SVG x within viewBox (0–959)
-  y: number; // SVG y within viewBox (0–593)
-  isHQ?: boolean;
-}
-
-/**
- * Seed data — a handful of real Filter Tech cities so the map looks alive
- * before the full customer CSV is wired up. Replace with CSV import later.
- */
-export const sampleCustomers: Customer[] = [
-  // Georgia
-  { city: 'Hogansville', state: 'GA', x: 698, y: 430, isHQ: true },
-  { city: 'LaGrange', state: 'GA', x: 692, y: 435 },
-  { city: 'Newnan', state: 'GA', x: 702, y: 421 },
-  { city: 'Atlanta', state: 'GA', x: 712, y: 410 },
-  { city: 'Athens', state: 'GA', x: 735, y: 408 },
-  { city: 'Macon', state: 'GA', x: 722, y: 445 },
-  { city: 'Columbus', state: 'GA', x: 695, y: 455 },
-  { city: 'Fitzgerald', state: 'GA', x: 738, y: 470 },
-  { city: 'Ocilla', state: 'GA', x: 738, y: 478 },
-  // Alabama
-  { city: 'Birmingham', state: 'AL', x: 645, y: 410 },
-  { city: 'Montgomery', state: 'AL', x: 660, y: 435 },
-  { city: 'Auburn', state: 'AL', x: 685, y: 432 },
-  // North Carolina
-  { city: 'Charlotte', state: 'NC', x: 810, y: 390 },
-  { city: 'Asheville', state: 'NC', x: 785, y: 385 },
-  // Florida
-  { city: 'Tallahassee', state: 'FL', x: 718, y: 462 },
-  { city: 'Gainesville', state: 'FL', x: 758, y: 500 },
-  { city: 'Pensacola', state: 'FL', x: 672, y: 460 },
-  // South Carolina
-  { city: 'Greenville', state: 'SC', x: 798, y: 400 },
-  // Tennessee
-  { city: 'Nashville', state: 'TN', x: 720, y: 365 },
-  // New York
-  { city: 'New York', state: 'NY', x: 875, y: 240 },
-  // Texas
-  { city: 'Dallas', state: 'TX', x: 495, y: 445 },
-];
 
 /**
  * Read the source US map SVG at build time. It's a public-domain SVG from
  * Wikimedia Commons with 51 state paths (plus DC), each tagged with a
  * two-letter lowercase class — `.ga`, `.al`, `.nc`, `.fl`, etc.
  *
- * We extract just the inner `<g class="state">` group and re-style every
- * state ourselves so the map matches Filter Tech's brand palette: charcoal
- * fill for non-service states, red for the four states we serve, with
- * cream separators between them.
+ * We strip the original styling and re-style the whole thing in the brand
+ * palette: charcoal fill for non-install states, red for any state we've
+ * installed in, with cream separators between them.
  */
 const RAW_SVG = fs.readFileSync(
   path.join(process.cwd(), 'public/images/us-map.svg'),
   'utf-8',
 );
-
 const STATES_GROUP_MATCH = RAW_SVG.match(/<g class="state">([\s\S]*?)<\/g>/);
 const STATES_INNER = (STATES_GROUP_MATCH ? STATES_GROUP_MATCH[1] : '')
-  // Strip <title> annotations — we don't need them.
   .replace(/<title>[^<]*<\/title>/g, '')
-  // The DC marker is a circle with class "dccircle" — let CSS hide it later
-  // if needed; here we just leave it in place.
   .trim();
 
+// CSS selectors for the install states — generated from the data so adding
+// a customer in a new state automatically lights up that state on the map.
+const RED_STATE_SELECTORS = STATES_WITH_INSTALLS.map(
+  (s) => `.us-states .${s.toLowerCase()}`,
+).join(',\n              ');
+
 interface CustomerMapProps {
-  customers: Customer[];
+  customers?: CustomerLocation[];
   className?: string;
 }
 
-export function CustomerMap({ customers, className }: CustomerMapProps) {
-  const total = customers.length;
+/**
+ * Pin radius scales with customer count — small towns get small pins,
+ * dense metros get bigger pins. Clamped so single-customer cities are still
+ * legible and 75+ -customer cities don't dominate.
+ */
+function pinRadius(count: number): number {
+  return Math.min(11, Math.max(2.5, Math.sqrt(count) * 1.4));
+}
+
+export function CustomerMap({
+  customers = customerLocations,
+  className,
+}: CustomerMapProps) {
+  const totalInstalls = customers.reduce((sum, c) => sum + c.count, 0);
   const stateCount = new Set(customers.map((c) => c.state)).size;
-  const pinned = customers.filter((c) => !c.isHQ);
-  const hq = customers.find((c) => c.isHQ);
+
+  // Treat Hogansville, GA as the HQ marker — rendered with a labeled ring
+  const hq = customers.find(
+    (c) => c.city.toLowerCase() === 'hogansville' && c.state === 'GA',
+  );
+  const pinned = customers.filter((c) => c !== hq);
 
   return (
     <figure
@@ -103,7 +81,7 @@ export function CustomerMap({ customers, className }: CustomerMapProps) {
         <svg
           viewBox="0 0 959 593"
           className="absolute inset-0 h-full w-full"
-          aria-label="Map of the United States showing Filter Tech customer locations across Georgia, Alabama, North Carolina, and Florida."
+          aria-label={`Map of the United States showing ${totalInstalls} Filter Tech installs across ${stateCount} states.`}
           role="img"
         >
           <style>
@@ -115,14 +93,7 @@ export function CustomerMap({ customers, className }: CustomerMapProps) {
                 stroke-linejoin: round;
               }
               /* States where Filter Tech has installed systems */
-              .us-states .ga,
-              .us-states .al,
-              .us-states .nc,
-              .us-states .fl,
-              .us-states .sc,
-              .us-states .tn,
-              .us-states .ny,
-              .us-states .tx {
+              ${RED_STATE_SELECTORS} {
                 fill: #DE3E40;
               }
               /* Hide Alaska, Hawaii, the DC circle, and the inset separator */
@@ -140,67 +111,60 @@ export function CustomerMap({ customers, className }: CustomerMapProps) {
             dangerouslySetInnerHTML={{ __html: STATES_INNER }}
           />
 
-          {/* Customer pins */}
-          {pinned.map((c) => (
-            <g key={`${c.city}-${c.state}`}>
-              <circle
-                cx={c.x}
-                cy={c.y}
-                r={5.5}
-                fill="#FAF7F2"
-                opacity={0.5}
-              />
-              <circle
-                cx={c.x}
-                cy={c.y}
-                r={2.4}
-                fill="#FAF7F2"
-                stroke="#243137"
-                strokeWidth={0.6}
-              >
-                <title>
-                  {c.city}, {c.state}
-                </title>
-              </circle>
-            </g>
-          ))}
+          {/* Customer pins — radius scales with install count per city */}
+          {pinned.map((c) => {
+            const r = pinRadius(c.count);
+            return (
+              <g key={`${c.city}-${c.state}`}>
+                <circle
+                  cx={c.x}
+                  cy={c.y}
+                  r={r + 2.5}
+                  fill="#FAF7F2"
+                  opacity={0.35}
+                />
+                <circle
+                  cx={c.x}
+                  cy={c.y}
+                  r={r}
+                  fill="#FAF7F2"
+                  stroke="#243137"
+                  strokeWidth={0.5}
+                  opacity={0.95}
+                >
+                  <title>
+                    {c.city}, {c.state} — {c.count} install
+                    {c.count > 1 ? 's' : ''}
+                  </title>
+                </circle>
+              </g>
+            );
+          })}
 
-          {/* HQ marker */}
+          {/* HQ marker for Hogansville, GA */}
           {hq ? (
             <g>
+              <circle cx={hq.x} cy={hq.y} r={14} fill="#FAF7F2" opacity={0.3} />
+              <circle cx={hq.x} cy={hq.y} r={8} fill="#FAF7F2" opacity={0.65} />
               <circle
                 cx={hq.x}
                 cy={hq.y}
-                r={13}
-                fill="#FAF7F2"
-                opacity={0.25}
-              />
-              <circle
-                cx={hq.x}
-                cy={hq.y}
-                r={7}
-                fill="#FAF7F2"
-                opacity={0.6}
-              />
-              <circle
-                cx={hq.x}
-                cy={hq.y}
-                r={3.5}
+                r={4}
                 fill="#FAF7F2"
                 stroke="#243137"
                 strokeWidth={1}
               >
                 <title>
-                  {hq.city}, {hq.state} — Headquarters
+                  Hogansville, GA — Headquarters ({hq.count} installs)
                 </title>
               </circle>
               <text
-                x={hq.x + 13}
-                y={hq.y + 3.5}
+                x={hq.x + 14}
+                y={hq.y + 4}
                 fill="#243137"
-                style={{ font: '600 10px var(--font-inter)' }}
+                style={{ font: '600 11px var(--font-inter)' }}
               >
-                {hq.city}, {hq.state}
+                Hogansville, GA
               </text>
             </g>
           ) : null}
@@ -212,16 +176,17 @@ export function CustomerMap({ customers, className }: CustomerMapProps) {
             Service Area
           </p>
           <p className="font-serif text-lg text-charcoal sm:text-xl">
-            {total}+ installs across {stateCount} states
+            {totalInstalls}+ installs across {stateCount} states
           </p>
           <p className="text-xs text-stone-600">
-            Each pin marks a household we&rsquo;ve served.
+            Each pin marks a city where we&rsquo;ve installed a system. Bigger
+            pin, more installs.
           </p>
         </div>
       </div>
       <figcaption className="border-t border-stone-300 px-4 py-3 text-center text-xs text-stone-600 sm:px-5">
-        Map is a representation of our service area — pin positions are
-        approximate. Source: Wikimedia Commons (public domain).
+        Pin positions are approximate (Albers USA projection). Map source:
+        Wikimedia Commons (public domain).
       </figcaption>
     </figure>
   );

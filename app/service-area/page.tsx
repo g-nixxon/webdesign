@@ -3,7 +3,7 @@ import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { FinalCTA } from '@/components/sections/FinalCTA';
-import { CustomerMap, sampleCustomers } from '@/components/sections/CustomerMap';
+import { CustomerMap } from '@/components/sections/CustomerMap';
 
 export const metadata: Metadata = {
   title: 'Service Area',
@@ -29,7 +29,7 @@ export default function ServiceAreaPage() {
 
       <section className="bg-cream py-20 sm:py-28">
         <Container>
-          <CustomerMap customers={sampleCustomers} />
+          <CustomerMap />
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {regions.map((r) => (
