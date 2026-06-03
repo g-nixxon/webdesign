@@ -4,6 +4,7 @@ import { PageHero } from '@/components/sections/PageHero';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 import { CustomerMap } from '@/components/sections/CustomerMap';
+import { customerLocations } from '@/lib/customer-locations';
 
 export const metadata: Metadata = {
   title: 'Service Area',
@@ -11,12 +12,26 @@ export const metadata: Metadata = {
     'Filter Tech serves Georgia, Alabama, North Carolina, and Florida. Free in-home water testing throughout the region.',
 };
 
-const regions = [
-  { state: 'Georgia', note: 'Top cities listed soon.' },
-  { state: 'Alabama', note: 'Top cities listed soon.' },
-  { state: 'North Carolina', note: 'Top cities listed soon.' },
-  { state: 'Florida', note: 'Top cities listed soon.' },
-];
+// The four primary marketing states. For each, we derive the top cities
+// by install count from the real customer data — so adding new customers
+// in a city automatically updates this list on the next deploy.
+const PRIMARY_STATES = [
+  { code: 'GA', name: 'Georgia' },
+  { code: 'AL', name: 'Alabama' },
+  { code: 'NC', name: 'North Carolina' },
+  { code: 'FL', name: 'Florida' },
+] as const;
+
+const TOP_CITIES_PER_STATE = 10;
+
+const regions = PRIMARY_STATES.map(({ code, name }) => {
+  const cities = customerLocations
+    .filter((c) => c.state === code)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, TOP_CITIES_PER_STATE)
+    .map((c) => c.city);
+  return { state: name, cities };
+});
 
 export default function ServiceAreaPage() {
   return (
@@ -35,7 +50,17 @@ export default function ServiceAreaPage() {
             {regions.map((r) => (
               <div key={r.state}>
                 <EyebrowLabel>{r.state}</EyebrowLabel>
-                <p className="mt-3 text-sm text-stone-600">{r.note}</p>
+                {r.cities.length > 0 ? (
+                  <ul className="mt-4 space-y-1.5 text-sm text-charcoal/85">
+                    {r.cities.map((city) => (
+                      <li key={city}>{city}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-3 text-sm text-stone-600">
+                    Coming soon.
+                  </p>
+                )}
               </div>
             ))}
           </div>
