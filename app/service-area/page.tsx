@@ -9,28 +9,29 @@ import { customerLocations } from '@/lib/customer-locations';
 export const metadata: Metadata = {
   title: 'Service Area',
   description:
-    'Filter Tech serves Georgia, Alabama, North Carolina, and Florida. Free in-home water testing throughout the region.',
+    'Filter Tech serves Georgia, Alabama, the Carolinas, and Florida. Free in-home water testing throughout the region.',
 };
 
-// The four primary marketing states. For each, we derive the top cities
-// by install count from the real customer data — so adding new customers
-// in a city automatically updates this list on the next deploy.
-const PRIMARY_STATES = [
-  { code: 'GA', name: 'Georgia' },
-  { code: 'AL', name: 'Alabama' },
-  { code: 'NC', name: 'North Carolina' },
-  { code: 'FL', name: 'Florida' },
+// The four marketing regions. Each region can include one or more state codes
+// (e.g. "The Carolinas" lumps NC + SC). Top cities under each card are derived
+// from the real customer data — so adding new customers in a city automatically
+// updates this list on the next deploy.
+const PRIMARY_REGIONS = [
+  { name: 'Georgia', codes: ['GA'], showState: false },
+  { name: 'Alabama', codes: ['AL'], showState: false },
+  { name: 'The Carolinas', codes: ['NC', 'SC'], showState: true },
+  { name: 'Florida', codes: ['FL'], showState: false },
 ] as const;
 
-const TOP_CITIES_PER_STATE = 10;
+const TOP_CITIES_PER_REGION = 10;
 
-const regions = PRIMARY_STATES.map(({ code, name }) => {
+const regions = PRIMARY_REGIONS.map(({ name, codes, showState }) => {
   const cities = customerLocations
-    .filter((c) => c.state === code)
+    .filter((c) => (codes as readonly string[]).includes(c.state))
     .sort((a, b) => b.count - a.count)
-    .slice(0, TOP_CITIES_PER_STATE)
-    .map((c) => c.city);
-  return { state: name, cities };
+    .slice(0, TOP_CITIES_PER_REGION)
+    .map((c) => ({ city: c.city, state: c.state }));
+  return { name, cities, showState };
 });
 
 export default function ServiceAreaPage() {
@@ -39,7 +40,7 @@ export default function ServiceAreaPage() {
       <PageHero
         eyebrow="Service Area"
         title="From the Mountains to the Gulf Coast, we cover it all."
-        description="We’re based in Hogansville, Georgia and cover most of the Southeast. We market across Georgia, Alabama, North Carolina, and Florida, but we’ve installed systems in eight states and counting. If you’re not sure whether we cover your area, give us a call — we travel further than the map shows for the right job."
+        description="We’re based in Hogansville, Georgia and cover most of the Southeast. We market across Georgia, Alabama, the Carolinas, and Florida, but we’ve installed systems in eight states and counting. If you’re not sure whether we cover your area, give us a call — we travel further than the map shows for the right job."
       />
 
       <section className="bg-cream py-20 sm:py-28">
@@ -48,18 +49,19 @@ export default function ServiceAreaPage() {
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {regions.map((r) => (
-              <div key={r.state}>
-                <EyebrowLabel>{r.state}</EyebrowLabel>
+              <div key={r.name}>
+                <EyebrowLabel>{r.name}</EyebrowLabel>
                 {r.cities.length > 0 ? (
                   <ul className="mt-4 space-y-1.5 text-sm text-charcoal/85">
-                    {r.cities.map((city) => (
-                      <li key={city}>{city}</li>
+                    {r.cities.map((entry) => (
+                      <li key={`${entry.city}-${entry.state}`}>
+                        {entry.city}
+                        {r.showState ? `, ${entry.state}` : ''}
+                      </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="mt-3 text-sm text-stone-600">
-                    Coming soon.
-                  </p>
+                  <p className="mt-3 text-sm text-stone-600">Coming soon.</p>
                 )}
               </div>
             ))}
