@@ -16,7 +16,7 @@ export const site = {
     country: 'US',
   },
   hours: 'Mon–Fri 8:00 AM – 5:00 PM',
-  serviceArea: ['Georgia', 'North Carolina', 'South Carolina', 'Alabama', 'North Florida'],
+  serviceArea: ['Georgia', 'Alabama', 'North Carolina', 'Florida'],
   social: {
     facebook: 'https://www.facebook.com/filtertechinc',
     google: 'https://g.page/filtertechinc',
