@@ -16,7 +16,7 @@ import { cn } from '@/lib/cn';
  */
 export interface Customer {
   city: string;
-  state: 'GA' | 'AL' | 'NC' | 'FL';
+  state: 'GA' | 'AL' | 'NC' | 'FL' | 'SC' | 'TN' | 'NY' | 'TX';
   x: number; // SVG x within viewBox (0–959)
   y: number; // SVG y within viewBox (0–593)
   isHQ?: boolean;
@@ -48,6 +48,14 @@ export const sampleCustomers: Customer[] = [
   { city: 'Tallahassee', state: 'FL', x: 718, y: 462 },
   { city: 'Gainesville', state: 'FL', x: 758, y: 500 },
   { city: 'Pensacola', state: 'FL', x: 672, y: 460 },
+  // South Carolina
+  { city: 'Greenville', state: 'SC', x: 798, y: 400 },
+  // Tennessee
+  { city: 'Nashville', state: 'TN', x: 720, y: 365 },
+  // New York
+  { city: 'New York', state: 'NY', x: 875, y: 240 },
+  // Texas
+  { city: 'Dallas', state: 'TX', x: 495, y: 445 },
 ];
 
 /**
@@ -80,6 +88,7 @@ interface CustomerMapProps {
 
 export function CustomerMap({ customers, className }: CustomerMapProps) {
   const total = customers.length;
+  const stateCount = new Set(customers.map((c) => c.state)).size;
   const pinned = customers.filter((c) => !c.isHQ);
   const hq = customers.find((c) => c.isHQ);
 
@@ -105,13 +114,24 @@ export function CustomerMap({ customers, className }: CustomerMapProps) {
                 stroke-width: 1;
                 stroke-linejoin: round;
               }
+              /* States where Filter Tech has installed systems */
               .us-states .ga,
               .us-states .al,
               .us-states .nc,
-              .us-states .fl {
+              .us-states .fl,
+              .us-states .sc,
+              .us-states .tn,
+              .us-states .ny,
+              .us-states .tx {
                 fill: #DE3E40;
               }
-              .us-states .dccircle { display: none; }
+              /* Hide Alaska, Hawaii, the DC circle, and the inset separator */
+              .us-states .ak,
+              .us-states .hi,
+              .us-states .dccircle,
+              .us-states .separator1 {
+                display: none;
+              }
             `}
           </style>
 
@@ -192,7 +212,7 @@ export function CustomerMap({ customers, className }: CustomerMapProps) {
             Service Area
           </p>
           <p className="font-serif text-lg text-charcoal sm:text-xl">
-            {total}+ installs across 4 states
+            {total}+ installs across {stateCount} states
           </p>
           <p className="text-xs text-stone-600">
             Each pin marks a household we&rsquo;ve served.

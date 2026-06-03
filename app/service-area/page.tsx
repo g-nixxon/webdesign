@@ -24,7 +24,7 @@ export default function ServiceAreaPage() {
       <PageHero
         eyebrow="Service Area"
         title="From the Mountains to the Gulf Coast, we cover it all."
-        description="We’re based in Hogansville, Georgia and serve homes across four states. If you’re not sure whether we cover your area, give us a call — we travel further than the map shows for the right job."
+        description="We’re based in Hogansville, Georgia and cover most of the Southeast. We market across Georgia, Alabama, North Carolina, and Florida, but we’ve installed systems in eight states and counting. If you’re not sure whether we cover your area, give us a call — we travel further than the map shows for the right job."
       />
 
       <section className="bg-cream py-20 sm:py-28">
