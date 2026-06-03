@@ -55,7 +55,7 @@ export function ContactForm() {
         </div>
         <h3 className="font-serif text-2xl text-charcoal">Got it.</h3>
         <p className="text-base leading-relaxed text-charcoal/85">
-          We’ll respond within one business day.
+          We’ll respond within 1–2 business days.
         </p>
         <Button variant="secondary" onClick={() => setStatus('idle')}>
           Send another message
@@ -88,17 +88,23 @@ export function ContactForm() {
         </Field>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field id="c-phone" label="Phone (optional)">
+        <Field id="c-phone" label="Phone" required error={errors.phone?.message}>
           <Input
             id="c-phone"
             type="tel"
             inputMode="tel"
             autoComplete="tel"
+            aria-invalid={!!errors.phone}
             {...register('phone')}
           />
         </Field>
-        <Field id="c-subject" label="Subject (optional)">
-          <Input id="c-subject" type="text" {...register('subject')} />
+        <Field id="c-subject" label="Subject" required error={errors.subject?.message}>
+          <Input
+            id="c-subject"
+            type="text"
+            aria-invalid={!!errors.subject}
+            {...register('subject')}
+          />
         </Field>
       </div>
       <Field id="c-message" label="Message" required error={errors.message?.message}>

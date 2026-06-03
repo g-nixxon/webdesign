@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
@@ -27,11 +27,6 @@ const details = [
     href: `mailto:${site.email}`,
   },
   {
-    icon: MapPin,
-    label: 'Office',
-    value: `${site.address.street}, ${site.address.city}, ${site.address.region} ${site.address.postalCode}`,
-  },
-  {
     icon: Clock,
     label: 'Hours',
     value: site.hours,
@@ -42,9 +37,9 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact"
-        title="Talk to us."
-        description="The fastest way to schedule is by phone. If you’d rather write, the form below comes straight to Jay’s inbox."
+        eyebrow="Contact Us"
+        title="Let’s talk water."
+        description="The fastest way to get ahold of us here at Filter Tech is by phone. If you’d rather write us, the form below comes straight to our inbox where we can answer your questions there."
       />
 
       <section className="bg-cream py-20 sm:py-28">
@@ -64,9 +59,9 @@ export default function ContactPage() {
               We answer every message.
             </h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
-              Jay reads them. So do we. If you’re ready to book a water test,
-              start there instead, it’s the same conversation, but the form
-              gives us your address so we can check the schedule.
+              If Jay reads them, so do we. Within 48 hours, someone from our
+              team will be in contact with you to ensure you have as much
+              information about your water as possible.
             </p>
 
             <dl className="mt-10 space-y-6">
@@ -112,7 +107,7 @@ export default function ContactPage() {
                 Send a message
               </h2>
               <p className="mt-2 text-sm text-charcoal/75">
-                We respond within one business day.
+                We respond within 1–2 business days.
               </p>
               <div className="mt-8">
                 <ContactForm />

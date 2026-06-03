@@ -24,8 +24,11 @@ export type BookingInput = z.infer<typeof bookingSchema>;
 export const contactSchema = z.object({
   name: z.string().min(2, 'Please enter your name'),
   email: z.string().email('Please enter a valid email'),
-  phone: z.string().optional().default(''),
-  subject: z.string().optional().default(''),
+  phone: z
+    .string()
+    .min(10, 'Please enter a valid phone number')
+    .max(20, 'That phone number seems too long'),
+  subject: z.string().min(2, 'Please add a short subject'),
   message: z.string().min(10, 'Please add a little more detail'),
 });
 
