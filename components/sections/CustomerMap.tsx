@@ -48,27 +48,12 @@ interface CustomerMapProps {
   className?: string;
 }
 
-/**
- * Pin radius scales with customer count — small towns get small pins,
- * dense metros get bigger pins. Clamped so single-customer cities are still
- * legible and 75+ -customer cities don't dominate.
- */
-function pinRadius(count: number): number {
-  return Math.min(11, Math.max(2.5, Math.sqrt(count) * 1.4));
-}
-
 export function CustomerMap({
   customers = customerLocations,
   className,
 }: CustomerMapProps) {
   const totalInstalls = customers.reduce((sum, c) => sum + c.count, 0);
   const stateCount = new Set(customers.map((c) => c.state)).size;
-
-  // Treat Hogansville, GA as the HQ marker — rendered with a labeled ring
-  const hq = customers.find(
-    (c) => c.city.toLowerCase() === 'hogansville' && c.state === 'GA',
-  );
-  const pinned = customers.filter((c) => c !== hq);
 
   return (
     <figure
@@ -110,64 +95,13 @@ export function CustomerMap({
             className="us-states"
             dangerouslySetInnerHTML={{ __html: STATES_INNER }}
           />
-
-          {/* Customer pins — radius scales with install count per city */}
-          {pinned.map((c) => {
-            const r = pinRadius(c.count);
-            return (
-              <g key={`${c.city}-${c.state}`}>
-                <circle
-                  cx={c.x}
-                  cy={c.y}
-                  r={r + 2.5}
-                  fill="#FAF7F2"
-                  opacity={0.35}
-                />
-                <circle
-                  cx={c.x}
-                  cy={c.y}
-                  r={r}
-                  fill="#FAF7F2"
-                  stroke="#243137"
-                  strokeWidth={0.5}
-                  opacity={0.95}
-                >
-                  <title>
-                    {c.city}, {c.state} — {c.count} install
-                    {c.count > 1 ? 's' : ''}
-                  </title>
-                </circle>
-              </g>
-            );
-          })}
-
-          {/* HQ marker for Hogansville, GA */}
-          {hq ? (
-            <g>
-              <circle cx={hq.x} cy={hq.y} r={14} fill="#FAF7F2" opacity={0.3} />
-              <circle cx={hq.x} cy={hq.y} r={8} fill="#FAF7F2" opacity={0.65} />
-              <circle
-                cx={hq.x}
-                cy={hq.y}
-                r={4}
-                fill="#FAF7F2"
-                stroke="#243137"
-                strokeWidth={1}
-              >
-                <title>
-                  Hogansville, GA — Headquarters ({hq.count} installs)
-                </title>
-              </circle>
-              <text
-                x={hq.x + 14}
-                y={hq.y + 4}
-                fill="#243137"
-                style={{ font: '600 11px var(--font-inter)' }}
-              >
-                Hogansville, GA
-              </text>
-            </g>
-          ) : null}
+          {/*
+            Customer pins and HQ marker intentionally removed — the CEO felt
+            the dot density read as too busy. Red state fills carry the
+            "where we serve" message on their own. Pin data still lives in
+            lib/customer-locations.ts and stays wired to the stats card and
+            the per-state city lists below the map.
+          */}
         </svg>
 
         {/* Floating stats card */}
@@ -179,14 +113,12 @@ export function CustomerMap({
             {totalInstalls}+ installs across {stateCount} states
           </p>
           <p className="text-xs text-stone-600">
-            Each pin marks a city where we&rsquo;ve installed a system. Bigger
-            pin, more installs.
+            Red states are where Filter Tech has installed systems.
           </p>
         </div>
       </div>
       <figcaption className="border-t border-stone-300 px-4 py-3 text-center text-xs text-stone-600 sm:px-5">
-        Pin positions are approximate (Albers USA projection). Map source:
-        Wikimedia Commons (public domain).
+        Map source: Wikimedia Commons (public domain).
       </figcaption>
     </figure>
   );
