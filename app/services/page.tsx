@@ -8,7 +8,7 @@ import { services } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Water Filtration Services',
   description:
-    'Whole-house, drinking water, reverse osmosis, alkaline, and rental systems — installed by a Certified Water Specialist serving GA, NC, SC, AL, and North FL.',
+    'Whole-house, reverse osmosis, and alkaline-hydrogen drinking water systems, installed by Filter Tech across Georgia, Alabama, the Carolinas, and Florida.',
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Filtration that fits the water — and the home."
+        title="Filtration that fits the water, and the home."
         description="We install the right system for the actual problem. Most homes need one or two of these. Almost none need all of them. Every installation starts with a free in-home water test."
       />
 

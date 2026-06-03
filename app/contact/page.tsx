@@ -65,7 +65,7 @@ export default function ContactPage() {
             </h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
               Jay reads them. So do we. If you’re ready to book a water test,
-              start there instead — it’s the same conversation, but the form
+              start there instead, it’s the same conversation, but the form
               gives us your address so we can check the schedule.
             </p>
 

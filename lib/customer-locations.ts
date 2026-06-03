@@ -1,5 +1,5 @@
-// AUTO-GENERATED from the master customer CSV. Customer PII is NOT included —
-// only (city, state, count, SVG coords) survive the pipeline.
+// AUTO-GENERATED from the master customer CSV. Customer PII is NOT included.
+// Only (city, state, count, SVG coords) survive the pipeline.
 // Regenerate with scripts/build-customer-map.py.
 
 export interface CustomerLocation {

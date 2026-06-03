@@ -2,8 +2,8 @@
 """
 Build the customer map data file from the master customer CSV.
 
-  Input  : ~/Downloads/Filter Tech Customer List - Master List.csv  (PII — DO NOT COMMIT)
-  Lookup : ~/Downloads/uscities-latlng.csv                          (US cities lat/lng — public dataset)
+  Input  : ~/Downloads/Filter Tech Customer List - Master List.csv  (PII, DO NOT COMMIT)
+  Lookup : ~/Downloads/uscities-latlng.csv                          (US cities lat/lng, public dataset)
   Output : lib/customer-locations.ts                                (aggregated, PII-free)
 
 Customer PII (names, addresses, phones, emails) never leaves this script.
@@ -11,7 +11,7 @@ Only (city, state, count, SVG x/y) is written to the TS output.
 
 How it works:
   1. Read the master CSV. Skip "Account Only" rows (vendors without service addresses).
-  2. Aggregate by (city, state) — drop everything else.
+  2. Aggregate by (city, state), drop everything else.
   3. Look up each city's lat/lng from the US cities dataset.
   4. Project each lat/lng to SVG coordinates using an Albers USA projection
      calibrated to the Wikimedia "Blank US Map (states only)" SVG (959×593).
@@ -80,7 +80,7 @@ def project(lat: float, lng: float) -> tuple[float, float]:
 # --- city lat/lng lookup ------------------------------------------------------
 
 MANUAL_COORDS = {
-    # Cities missing from the public dataset — typically "St." vs "Saint" forms.
+    # Cities missing from the public dataset, typically "St." vs "Saint" forms.
     ("port st. joe", "FL"): (29.812, -85.302),
     ("st. simons island", "GA"): (31.150, -81.378),
     ("sugar hill", "GA"): (34.106, -84.034),
@@ -141,7 +141,7 @@ def aggregate_customers(path: str) -> Counter:
 
 def write_ts(resolved: list[dict], out_path: str) -> None:
     lines = [
-        "// AUTO-GENERATED from the master customer CSV. Customer PII is NOT included —",
+        "// AUTO-GENERATED from the master customer CSV. Customer PII is NOT included.",
         "// only (city, state, count, SVG coords) survive the pipeline.",
         "// Regenerate with scripts/build-customer-map.py.",
         "",

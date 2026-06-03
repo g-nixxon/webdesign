@@ -11,7 +11,7 @@ export function ServicesGrid() {
           <SectionHeading
             eyebrow="What We Install"
             title="Here’s a list of the filtration systems we provide."
-            description="There’s no one-size-fits-all in water. It’s all chemistry-related — we start with your pH balance and go from there."
+            description="There’s no one-size-fits-all in water. It’s all chemistry-related, we start with your pH balance and go from there."
           />
         </div>
 

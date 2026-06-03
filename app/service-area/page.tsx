@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 // The four marketing regions. Each region can include one or more state codes
 // (e.g. "The Carolinas" lumps NC + SC). Top cities under each card are derived
-// from the real customer data — so adding new customers in a city automatically
+// from the real customer data, so adding new customers in a city automatically
 // updates this list on the next deploy.
 const PRIMARY_REGIONS = [
   { name: 'Georgia', codes: ['GA'], showState: false },
@@ -40,7 +40,7 @@ export default function ServiceAreaPage() {
       <PageHero
         eyebrow="Service Area"
         title="From the Mountains to the Gulf Coast, we cover it all."
-        description="We’re based in Hogansville, Georgia and cover most of the Southeast. We market across Georgia, Alabama, the Carolinas, and Florida, but we’ve installed systems in eight states and counting. If you’re not sure whether we cover your area, give us a call — we travel further than the map shows for the right job."
+        description="We’re based in Hogansville, Georgia and cover most of the Southeast. We market across Georgia, Alabama, the Carolinas, and Florida, but we’ve installed systems in eight states and counting. If you’re not sure whether we cover your area, give us a call, we travel further than the map shows for the right job."
       />
 
       <section className="bg-cream py-20 sm:py-28">
@@ -69,7 +69,7 @@ export default function ServiceAreaPage() {
 
           <p className="mt-14 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
             Don’t see your town? Give us a call. Many of our long-time customers
-            are an hour or more outside the cities listed — we make the trip
+            are an hour or more outside the cities listed, we make the trip
             when the work is there.
           </p>
         </Container>

@@ -5,7 +5,6 @@ import { PullQuote } from '@/components/ui/PullQuote';
 import { Button } from '@/components/ui/Button';
 
 const certs = [
-  'Certified Water Specialist (WQA)',
   'Certified Installer',
   'Reverse Osmosis & Ultra-filtration Certified',
 ];
@@ -18,7 +17,7 @@ export function AuthorityBlock() {
           <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-sm border border-stone-300 bg-stone-100 lg:max-w-none">
             <Image
               src="/images/jay-and-karen.jpg"
-              alt="Jay and Karen Hanlon — Filter Tech’s family-owned operators, standing together in branded shirts"
+              alt="Jay and Karen Hanlon, Filter Tech’s family-owned operators, standing together in branded shirts"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover object-center"
@@ -35,7 +34,7 @@ export function AuthorityBlock() {
         <div className="lg:col-span-7">
           <EyebrowLabel>Meet Your Specialist</EyebrowLabel>
           <h2 className="mt-4 font-serif text-3xl leading-tight text-charcoal sm:text-4xl md:text-5xl">
-            Three decades of water filtration — read by one person.
+            Three decades of water filtration, read by one person.
           </h2>
           <p className="mt-5 max-w-prose text-base leading-relaxed text-charcoal/85 sm:text-lg">
             Jay started as a plumber. Twelve years in the trade, then nine more
@@ -49,7 +48,7 @@ export function AuthorityBlock() {
             <PullQuote
               quote="If I can’t show you the problem in your own water, I won’t try to sell you a system."
               cite="Jay Hanlon"
-              attribution="Certified Water Specialist"
+              attribution="Water Specialist"
             />
           </div>
           <ul className="mt-8 grid gap-2">

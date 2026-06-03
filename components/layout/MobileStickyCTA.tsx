@@ -20,7 +20,7 @@ export function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Hide on the booking page itself — the form IS the conversion
+  // Hide on the booking page itself, the form IS the conversion
   if (pathname === '/book') return null;
 
   return (

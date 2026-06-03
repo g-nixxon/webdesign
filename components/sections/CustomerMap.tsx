@@ -13,7 +13,7 @@ import {
  *
  * Pin coordinates come from `lib/customer-locations.ts`, which is
  * AUTO-GENERATED from the master customer CSV by `scripts/build-customer-map.py`.
- * Customer PII (names, addresses, phones, emails) never leaves that script —
+ * Customer PII (names, addresses, phones, emails) never leaves that script , 
  * only aggregated (city, state, count, SVG x/y) reach this file.
  *
  * Regenerate after adding new customers by re-running the python script.
@@ -22,7 +22,7 @@ import {
 /**
  * Read the source US map SVG at build time. It's a public-domain SVG from
  * Wikimedia Commons with 51 state paths (plus DC), each tagged with a
- * two-letter lowercase class — `.ga`, `.al`, `.nc`, `.fl`, etc.
+ * two-letter lowercase class, `.ga`, `.al`, `.nc`, `.fl`, etc.
  *
  * We strip the original styling and re-style the whole thing in the brand
  * palette: charcoal fill for non-install states, red for any state we've
@@ -37,7 +37,7 @@ const STATES_INNER = (STATES_GROUP_MATCH ? STATES_GROUP_MATCH[1] : '')
   .replace(/<title>[^<]*<\/title>/g, '')
   .trim();
 
-// CSS selectors for the install states — generated from the data so adding
+// CSS selectors for the install states, generated from the data so adding
 // a customer in a new state automatically lights up that state on the map.
 const RED_STATE_SELECTORS = STATES_WITH_INSTALLS.map(
   (s) => `.us-states .${s.toLowerCase()}`,
@@ -96,7 +96,7 @@ export function CustomerMap({
             dangerouslySetInnerHTML={{ __html: STATES_INNER }}
           />
           {/*
-            Customer pins and HQ marker intentionally removed — the CEO felt
+            Customer pins and HQ marker intentionally removed, the CEO felt
             the dot density read as too busy. Red state fills carry the
             "where we serve" message on their own. Pin data still lives in
             lib/customer-locations.ts and stays wired to the stats card and

@@ -8,7 +8,7 @@ import { site } from '@/lib/site';
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      {/* Soft warm gradient — no blue, stays neutral */}
+      {/* Soft warm gradient, no blue, stays neutral */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_70%_30%,rgba(36,49,55,0.06),transparent_55%),radial-gradient(circle_at_20%_80%,rgba(222,62,64,0.04),transparent_45%)]"
@@ -49,13 +49,13 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Visual panel — James Hanlon headshot with quote caption */}
+        {/* Visual panel, James Hanlon headshot with quote caption */}
         <div className="lg:col-span-5">
           <div className="relative mx-auto max-w-md lg:max-w-none">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-stone-300 bg-stone-100">
               <Image
                 src="/images/jay-headshot.jpg"
-                alt="Jay Hanlon, Certified Water Specialist and owner of Filter Tech Inc., smiling in a Filter Tech t-shirt and cap"
+                alt="Jay Hanlon, owner of Filter Tech Inc., smiling in a Filter Tech t-shirt and cap"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -66,7 +66,7 @@ export function Hero() {
                   “If you don’t have a filter, you are the filter.”
                 </p>
                 <p className="mt-1 text-xs text-stone-600">
-                  — Jay Hanlon, Water Specialist
+                  Jay Hanlon, Water Specialist
                 </p>
               </div>
             </div>

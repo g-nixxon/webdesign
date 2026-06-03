@@ -3,7 +3,7 @@ export const site = {
   shortName: 'Filter Tech',
   tagline: "Know What You're Drinking Before You Drink It.",
   description:
-    'Free in-home water sampling and custom filtration systems for Georgia, North Carolina, South Carolina, Alabama, and North Florida. Filter Tech Inc. since 2010 — 30+ years in the water filtration trade.',
+    'Free in-home water sampling and custom filtration systems for Georgia, North Carolina, South Carolina, Alabama, and North Florida. Filter Tech Inc. since 2010, 30+ years in the water filtration trade.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://filtertechinc.com',
   phone: '+17704871066',
   phoneDisplay: '(770) 487-1066',
@@ -31,7 +31,7 @@ export const nav = [
   { href: '/contact', label: 'Contact' },
 ];
 
-// Publicly listed services — drives the homepage grid, services hub, footer,
+// Publicly listed services, drives the homepage grid, services hub, footer,
 // and sitemap. Water Testing and Financing content still lives in
 // services-data.ts and their detail URLs still resolve, but they're not
 // surfaced in any list right now (they'll be moved to dedicated pages later).
@@ -40,7 +40,7 @@ export const services = [
     slug: 'whole-house-filtration',
     title: 'Whole-House Filtration',
     blurb:
-      'Cleaner water at every faucet, shower, and appliance — at the point water enters your home.',
+      'Cleaner water at every faucet, shower, and appliance, at the point water enters your home.',
   },
   {
     slug: 'reverse-osmosis',
@@ -52,6 +52,6 @@ export const services = [
     slug: 'hydrogen-systems',
     title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
-      'Filtered, ionized water enriched with molecular hydrogen — the Delphi H2 by AlkaViva, installed at your kitchen sink for daily antioxidant-rich drinking water.',
+      'Filtered, ionized water enriched with molecular hydrogen, the Delphi H2 by AlkaViva, installed at your kitchen sink for daily antioxidant-rich drinking water.',
   },
 ];

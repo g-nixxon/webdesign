@@ -8,11 +8,11 @@ import { BookingForm } from '@/components/forms/BookingForm';
 export const metadata: Metadata = {
   title: 'Book Your Free Water Test',
   description:
-    'Book a free in-home visit and water sample with a Certified Water Specialist. No charge, no pressure, no obligation.',
+    'Book a free in-home visit and water sample with a water specialist. No charge, no pressure, no obligation.',
 };
 
 const trustPoints = [
-  'Free in-home consultation — no charge',
+  'Free in-home consultation, no charge',
   'Water samples collected for precise lab testing',
   'On-site survey of where a system would go',
   'No pressure to buy anything',
@@ -69,7 +69,7 @@ export default function BookPage() {
                   </p>
                 </blockquote>
                 <p className="mt-3 text-xs text-stone-600">
-                  — Jay Hanlon, Certified Water Specialist
+                  Jay Hanlon, Water Specialist
                 </p>
               </div>
             </div>

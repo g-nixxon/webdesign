@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
@@ -10,7 +10,7 @@ import { articles } from '@/lib/articles-data';
 export const metadata: Metadata = {
   title: 'Water 101: A Plain-Language Guide',
   description:
-    'Articles and guides on water quality, filtration, testing, and maintenance — written for homeowners, not chemists.',
+    'Articles and guides on water quality, filtration, testing, and maintenance, written for homeowners, not chemists.',
 };
 
 export default function WaterEducationHub() {
@@ -40,11 +40,7 @@ export default function WaterEducationHub() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/80">
                     {a.excerpt}
                   </p>
-                  <div className="mt-6 flex items-center justify-between border-t border-stone-300 pt-4">
-                    <span className="flex items-center gap-1.5 text-xs text-stone-600">
-                      <Clock size={12} />
-                      {a.readMinutes} min read
-                    </span>
+                  <div className="mt-6 flex items-center justify-end border-t border-stone-300 pt-4">
                     <span className="flex items-center gap-1 text-xs font-medium text-charcoal">
                       Read
                       <ArrowRight

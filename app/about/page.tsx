@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A water specialist, not a salesman."
-        description="Filter Tech Inc. is owned and operated by Jay Hanlon, a water specialist with three decades in the water filtration trade — and a stubborn belief that the customer should see the test before they hear the price."
+        description="Filter Tech Inc. is owned and operated by Jay Hanlon, a water specialist with three decades in the water filtration trade, and a stubborn belief that the customer should see the test before they hear the price."
       />
 
       {/* Family banner */}
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <div className="relative aspect-[3/2] sm:aspect-[16/9]">
               <Image
                 src="/images/family.jpg"
-                alt="The Hanlon family — Jay, Karen, their children, and granddaughter — in matching Filter Tech shirts"
+                alt="The Hanlon family, Jay, Karen, their children, and granddaughter, in matching Filter Tech shirts"
                 fill
                 sizes="(max-width: 1280px) 100vw, 1200px"
                 className="object-cover object-center"
@@ -57,7 +57,7 @@ export default function AboutPage() {
               <p>
                 Jay spent his first twelve years as a plumber. He saw firsthand
                 what water does to pipes, fixtures, and water heaters when
-                nobody’s filtering it — and what happens when somebody
+                nobody’s filtering it, and what happens when somebody
                 tries to sell a family the wrong fix.
               </p>
               <p>
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 },
                 {
                   title: 'Stand behind it.',
-                  body: 'Annual service keeps your system working — and keeps us accountable to the result we promised.',
+                  body: 'Annual service keeps your system working, and keeps us accountable to the result we promised.',
                 },
               ].map((v) => (
                 <li

@@ -25,15 +25,15 @@ export const serviceContent: Record<string, ServiceContent> = {
     slug: 'whole-house-filtration',
     title: 'Whole-House Filtration',
     blurb:
-      'Cleaner, conditioned water at every faucet, shower, and appliance — at the point water enters your home.',
+      'Cleaner, conditioned water at every faucet, shower, and appliance, at the point water enters your home.',
     problemHeading: 'What our whole-house system solves',
     problem:
-      'A whole-house system filters water before it ever reaches a tap. That matters because what comes through the main line isn’t just one thing — it can be chlorine and chloramine from city treatment, disinfection byproducts (THMs and HAAs), traces of lead from old plumbing, PFAs, sediment from well water, or the hardness that scales appliances and dries out skin. We size and stack a system to fit what your water is actually carrying.',
+      'A whole-house system filters water before it ever reaches a tap. That matters because what comes through the main line isn’t just one thing, it can be chlorine and chloramine from city treatment, disinfection byproducts (THMs and HAAs), traces of lead from old plumbing, PFAs, sediment from well water, or the hardness that scales appliances and dries out skin. We size and stack a system to fit what your water is actually carrying.',
     howHeading: 'How this system works',
     how: [
       'Water enters your home through a single main line.',
-      'We install a multi-stage filter sized to your home’s flow rate. Common stages: catalytic carbon for chlorine, taste, and VOCs; certified lead-reduction media when the testing calls for it; and — when hardness is the issue — a softener or conditioner.',
-      'Two softening options: a traditional ion-exchange softener (resin beads regenerated with a salt brine cycle), or a salt-free conditioner using Template Assisted Crystallization (TAC) — no salt, no waste water, low maintenance.',
+      'We install a multi-stage filter sized to your home’s flow rate. Common stages: catalytic carbon for chlorine, taste, and VOCs; certified lead-reduction media when the testing calls for it; and, when hardness is the issue, a softener or conditioner.',
+      'Two softening options: a traditional ion-exchange softener (resin beads regenerated with a salt brine cycle), or a salt-free conditioner using Template Assisted Crystallization (TAC), no salt, no waste water, low maintenance.',
       'The right combination depends on the lab results from your free in-home water test.',
     ],
     includes: [
@@ -46,7 +46,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     fitsHomeHeading: 'Every home benefits from a filter',
     fitsHome:
-      'Every home benefits from filtered water — period. A whole-house system is the right move when you want that protection to cover every faucet, shower, and appliance, not just the kitchen tap. It handles the bulk of what comes through the main line — chlorine, sediment, hardness, taste — at the source, so what reaches each room is already cleaner.',
+      'Every home benefits from filtered water, period. A whole-house system is the right move when you want that protection to cover every faucet, shower, and appliance, not just the kitchen tap. It handles the bulk of what comes through the main line, chlorine, sediment, hardness, taste, at the source, so what reaches each room is already cleaner.',
     faqs: [
       {
         q: 'Will it slow my water pressure?',
@@ -83,11 +83,11 @@ export const serviceContent: Record<string, ServiceContent> = {
       'One of our most popular drinking water systems. The same filtration hospitals, labs, and bottling plants rely on, right at your kitchen sink.',
     problemHeading: 'What this system solves',
     problem:
-      'City water is treated to be safe, not pure. Even after treatment, what comes through your tap can carry chlorine and chloramine, heavy metals, PFAS, and disinfection byproducts like trihalomethanes (THMs) and haloacetic acids (HAAs). Add to that the practical realities — mains break, pipes corrode, boil-water alerts happen. Reverse Osmosis is what hospitals, labs, and bottling plants use when they need water they can count on.',
+      'City water is treated to be safe, not pure. Even after treatment, what comes through your tap can carry chlorine and chloramine, heavy metals, PFAS, and disinfection byproducts like trihalomethanes (THMs) and haloacetic acids (HAAs). Add to that the practical realities, mains break, pipes corrode, boil-water alerts happen. Reverse Osmosis is what hospitals, labs, and bottling plants use when they need water they can count on.',
     how: [
       'Pre-filters strip sediment and chlorine that would otherwise damage the membrane.',
       'Water is forced through a semi-permeable membrane that blocks dissolved salts, heavy metals, PFAS, nitrates, fluoride, and microbes.',
-      'Total dissolved solids drop 90 to 99 percent — consistent, measurable results we can show you on a meter.',
+      'Total dissolved solids drop 90 to 99 percent, consistent, measurable results we can show you on a meter.',
       'A small storage tank holds the finished water for instant access at a dedicated faucet.',
       'Optional: a remineralization cartridge puts calcium and magnesium back if you want minerals in the finished water.',
     ],
@@ -100,7 +100,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       'Optional remineralization cartridge',
     ],
     fitsHome:
-      'Homes with high TDS readings, well water, or family members with sensitivities. The default for anyone who wants the cleanest possible drinking water at the kitchen sink — and the right call for households worried about PFAS, lead, or boil-water alerts.',
+      'Homes with high TDS readings, well water, or family members with sensitivities. The default for anyone who wants the cleanest possible drinking water at the kitchen sink, and the right call for households worried about PFAS, lead, or boil-water alerts.',
     faqs: [
       {
         q: 'Why does the RO come with a different faucet?',
@@ -108,15 +108,15 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
       {
         q: 'Why do I need an RO system if I can just buy bottled water?',
-        a: 'Great question — two reasons we recommend a system. First, an RO unit makes fresh water daily, on demand. It isn’t stored in a bottle sitting on a shelf for who knows how long. Second, you stop wasting water and money on bottled water — no more half-full bottles lying around the house. You walk up to the faucet and use the RO as needed for drinking and cooking.',
+        a: 'Great question, two reasons we recommend a system. First, an RO unit makes fresh water daily, on demand. It isn’t stored in a bottle sitting on a shelf for who knows how long. Second, you stop wasting water and money on bottled water, no more half-full bottles lying around the house. You walk up to the faucet and use the RO as needed for drinking and cooking.',
       },
       {
         q: 'How much does it actually remove?',
-        a: 'Total dissolved solids drop between 90 and 99 percent. We can show you the reading on a TDS meter before and after — it’s the cleanest demonstration of how the system works.',
+        a: 'Total dissolved solids drop between 90 and 99 percent. We can show you the reading on a TDS meter before and after, it’s the cleanest demonstration of how the system works.',
       },
       {
         q: 'Does RO remove minerals my body needs?',
-        a: 'Most of your minerals come from food, not water. If you want them back in the water anyway, we add a remineralization cartridge after the membrane — calcium and magnesium, the same minerals you’d get from spring water.',
+        a: 'Most of your minerals come from food, not water. If you want them back in the water anyway, we add a remineralization cartridge after the membrane, calcium and magnesium, the same minerals you’d get from spring water.',
       },
       {
         q: 'How much water does it waste?',
@@ -125,7 +125,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     asideImage: {
       src: '/images/system-ro.jpg',
-      alt: 'A Filter Tech reverse osmosis system installed under a kitchen sink — storage tank, multi-stage filters, and dedicated faucet line',
+      alt: 'A Filter Tech reverse osmosis system installed under a kitchen sink, storage tank, multi-stage filters, and dedicated faucet line',
       caption: 'Our most popular drinking water system',
     },
   },
@@ -134,15 +134,15 @@ export const serviceContent: Record<string, ServiceContent> = {
     slug: 'hydrogen-systems',
     title: 'Alkaline-Hydrogen Drinking Water',
     blurb:
-      'The Delphi H2 by AlkaViva — an under-sink ionizer that filters your water, raises the pH naturally with calcium and magnesium, and infuses every glass with dissolved molecular hydrogen for the antioxidant benefits backed by a growing body of peer-reviewed research.',
+      'The Delphi H2 by AlkaViva, an under-sink ionizer that filters your water, raises the pH naturally with calcium and magnesium, and infuses every glass with dissolved molecular hydrogen for the antioxidant benefits backed by a growing body of peer-reviewed research.',
     problemHeading: 'What this system solves',
     problem:
-      'Filtration gets your water clean. The Delphi H2 by AlkaViva takes the next step. After multi-stage pre-filtration, an ionization cell uses electrolysis to raise the pH naturally into a slightly alkaline range (typically 8.5 to 9.5) — using the calcium and magnesium already present in your water — and infuses every glass with dissolved molecular hydrogen (H₂). H₂ is the compound at the center of more than a thousand peer-reviewed studies on antioxidant function, recovery, and inflammation. The dedicated faucet delivers multiple modes: alkaline water for drinking, neutral water for everyday use, and acidic water for cleaning and skincare. For health-conscious customers already taking supplements for similar reasons, it’s a way to get those benefits from water they’re drinking anyway.',
+      'Filtration gets your water clean. The Delphi H2 by AlkaViva takes the next step. After multi-stage pre-filtration, an ionization cell uses electrolysis to raise the pH naturally into a slightly alkaline range (typically 8.5 to 9.5), using the calcium and magnesium already present in your water, and infuses every glass with dissolved molecular hydrogen (H₂). H₂ is the compound at the center of more than a thousand peer-reviewed studies on antioxidant function, recovery, and inflammation. The dedicated faucet delivers multiple modes: alkaline water for drinking, neutral water for everyday use, and acidic water for cleaning and skincare. For health-conscious customers already taking supplements for similar reasons, it’s a way to get those benefits from water they’re drinking anyway.',
     how: [
-      'Water enters the Delphi H2 through built-in multi-stage pre-filtration — sediment, chlorine, and other contaminants are stripped out before the next stage.',
+      'Water enters the Delphi H2 through built-in multi-stage pre-filtration, sediment, chlorine, and other contaminants are stripped out before the next stage.',
       'An ionization cell uses electrolysis to split the filtered water, raising the pH naturally and producing dissolved molecular hydrogen (H₂) at the same time.',
       'Naturally occurring calcium and magnesium are preserved in the finished water, supporting that slightly alkaline pH without any added minerals or chemicals.',
-      'A dedicated under-sink faucet delivers your water in the mode you select — alkaline for drinking, neutral, or acidic for cleaning and skincare.',
+      'A dedicated under-sink faucet delivers your water in the mode you select, alkaline for drinking, neutral, or acidic for cleaning and skincare.',
     ],
     includes: [
       'Free in-home consultation and water sample',
@@ -154,28 +154,28 @@ export const serviceContent: Record<string, ServiceContent> = {
     ],
     fitsHomeHeading: 'Who this is for',
     fitsHome:
-      'Health-conscious households who want their drinking water to do more than be clean — particularly people already taking antioxidant or recovery supplements who’d rather get the same benefits from water they’re drinking anyway. Common pick among athletes managing inflammation and recovery.',
+      'Health-conscious households who want their drinking water to do more than be clean, particularly people already taking antioxidant or recovery supplements who’d rather get the same benefits from water they’re drinking anyway. Common pick among athletes managing inflammation and recovery.',
     faqs: [
       {
         q: 'What does hydrogen water actually do?',
-        a: 'Molecular hydrogen (H₂) acts as a selective antioxidant — it targets the free radicals tied to oxidative stress while leaving healthy molecules alone. Research has explored its role in ATP production, lactic acid reduction, and inflammation. We don’t make medical promises; we install the systems the research is pointing at.',
+        a: 'Molecular hydrogen (H₂) acts as a selective antioxidant, it targets the free radicals tied to oxidative stress while leaving healthy molecules alone. Research has explored its role in ATP production, lactic acid reduction, and inflammation. We don’t make medical promises; we install the systems the research is pointing at.',
       },
       {
         q: 'What’s the difference between this and an RO system?',
-        a: 'An RO system forces water through a semi-permeable membrane to strip out dissolved solids — that’s the deepest filtration we install, and the trade-off is that minerals come out along with everything else. The Delphi H2 takes a different path: it filters your water, ionizes it to raise the pH naturally, and adds dissolved molecular hydrogen at point of use — while preserving the calcium and magnesium already in your water. So an RO is about pure, contaminant-free water. The Delphi H2 is about filtered water that’s also doing more: supporting hydration, recovery, and antioxidant function. Some customers install both — RO for the deepest purity, Delphi H2 for the active benefits.',
+        a: 'An RO system forces water through a semi-permeable membrane to strip out dissolved solids, that’s the deepest filtration we install, and the trade-off is that minerals come out along with everything else. The Delphi H2 takes a different path: it filters your water, ionizes it to raise the pH naturally, and adds dissolved molecular hydrogen at point of use, while preserving the calcium and magnesium already in your water. So an RO is about pure, contaminant-free water. The Delphi H2 is about filtered water that’s also doing more: supporting hydration, recovery, and antioxidant function. Some customers install both, RO for the deepest purity, Delphi H2 for the active benefits.',
       },
       {
         q: 'What’s the pH of the finished water?',
-        a: 'Slightly alkaline — typically in the 8.5 to 9.5 range. The system uses the calcium and magnesium already present in your water — no chemicals added — to keep the pH balanced.',
+        a: 'Slightly alkaline, typically in the 8.5 to 9.5 range. The system uses the calcium and magnesium already present in your water, no chemicals added, to keep the pH balanced.',
       },
       {
         q: 'How often do the cartridges need replacement?',
-        a: 'The Delphi H2 has multiple filter stages — typically a sediment pre-filter and a carbon/multi-media block. Each stage lasts 6 to 12 months depending on how much water your household uses and what’s coming out of your source. We set you up with a replacement schedule fitted to your specific install, and we send you reminders when each one is due — you won’t have to track it yourself. If you ever notice a change in taste, pressure, or the unit’s display readings, give us a call and we’ll come out to check things over. Replacing the filters is the only routine maintenance the system requires.',
+        a: 'The Delphi H2 has multiple filter stages, typically a sediment pre-filter and a carbon/multi-media block. Each stage lasts 6 to 12 months depending on how much water your household uses and what’s coming out of your source. We set you up with a replacement schedule fitted to your specific install, and we send you reminders when each one is due, you won’t have to track it yourself. If you ever notice a change in taste, pressure, or the unit’s display readings, give us a call and we’ll come out to check things over. Replacing the filters is the only routine maintenance the system requires.',
       },
     ],
     asideImage: {
       src: '/images/delphi-h2.jpg',
-      alt: 'The Delphi H2 by AlkaViva — an under-sink alkaline-hydrogen water ionizer, installed in a customer kitchen cabinet',
+      alt: 'The Delphi H2 by AlkaViva, an under-sink alkaline-hydrogen water ionizer, installed in a customer kitchen cabinet',
       caption: 'The Delphi H2 by AlkaViva',
     },
   },
@@ -186,12 +186,12 @@ export const serviceContent: Record<string, ServiceContent> = {
     blurb:
       'We come to your home, collect water samples, and look at where a system would go. Lab testing follows. No charge, no obligation.',
     problem:
-      'You can’t fix what you haven’t tested. Most water issues are invisible — chlorine, hardness, dissolved solids, iron — and the only way to know what’s in your water is to measure it. The first step is getting a sample to our lab and putting eyes on the install site.',
+      'You can’t fix what you haven’t tested. Most water issues are invisible, chlorine, hardness, dissolved solids, iron, and the only way to know what’s in your water is to measure it. The first step is getting a sample to our lab and putting eyes on the install site.',
     how: [
       'You book a time that works for you.',
       'Jay visits your home, listens to your concerns, and collects water samples.',
       'We walk through where a system would sit if your water needs one.',
-      'Samples go back to the lab for the precise readings — hardness, chlorine, iron, pH, total dissolved solids, and source-specific markers.',
+      'Samples go back to the lab for the precise readings, hardness, chlorine, iron, pH, total dissolved solids, and source-specific markers.',
       'You get the full results with a plain-language explanation and our recommendation.',
     ],
     includes: [
@@ -199,11 +199,11 @@ export const serviceContent: Record<string, ServiceContent> = {
       'Water sample collection for lab analysis',
       'On-site survey of potential install locations',
       'Plain-language results report',
-      'A specific recommendation — or an honest "you don’t need anything"',
+      'A specific recommendation, or an honest "you don’t need anything"',
       'No obligation to buy',
     ],
     fitsHome:
-      'Anyone who hasn’t had their water tested in the last two years — or ever. The required first step before we recommend any system.',
+      'Anyone who hasn’t had their water tested in the last two years, or ever. The required first step before we recommend any system.',
     faqs: [
       {
         q: 'How long does the home visit take?',
@@ -211,7 +211,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
       {
         q: 'Why don’t you test the water on-site?',
-        a: 'For an accurate picture, we use lab equipment that isn’t mobile. The home visit covers concerns, sampling, and looking at the install site — the precise numbers come back from the lab.',
+        a: 'For an accurate picture, we use lab equipment that isn’t mobile. The home visit covers concerns, sampling, and looking at the install site, the precise numbers come back from the lab.',
       },
       {
         q: 'Is it really free?',
@@ -226,11 +226,11 @@ export const serviceContent: Record<string, ServiceContent> = {
     blurb:
       'Cleaner water without the upfront cost. Approved payment plans on installed systems.',
     problem:
-      'A whole-house system pays for itself over time — in appliance life, bottled water saved, and what your skin and hair stop reacting to. But the upfront cost can be the thing that gets in the way of doing the work. We offer financing through approved partners so the day-one number isn’t the deciding factor.',
+      'A whole-house system pays for itself over time, in appliance life, bottled water saved, and what your skin and hair stop reacting to. But the upfront cost can be the thing that gets in the way of doing the work. We offer financing through approved partners so the day-one number isn’t the deciding factor.',
     how: [
       'You book a free in-home consultation.',
       'If a system makes sense for your home, we quote the install.',
-      'We walk through financing options — including budget-friendly monthly payment plans.',
+      'We walk through financing options, including budget-friendly monthly payment plans.',
       'Once approved, the system gets installed with no large upfront payment.',
     ],
     includes: [
@@ -240,7 +240,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       'Standard ongoing service and support after install',
     ],
     fitsHome:
-      'Homeowners who want filtration but would rather not pay the full install cost on day one — especially for larger whole-house builds.',
+      'Homeowners who want filtration but would rather not pay the full install cost on day one, especially for larger whole-house builds.',
     faqs: [
       {
         q: 'What credit profiles qualify?',
@@ -248,7 +248,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
       {
         q: 'How long are the payment terms?',
-        a: 'Depends on the partner and the install size — typically anywhere from 12 to 84 months.',
+        a: 'Depends on the partner and the install size, typically anywhere from 12 to 84 months.',
       },
       {
         q: 'Are there prepayment penalties?',

@@ -59,7 +59,7 @@ export async function POST(request: Request) {
       );
     }
   } else {
-    // No webhook configured yet — log so the dev/owner can see submissions
+    // No webhook configured yet, log so the dev/owner can see submissions
     // eslint-disable-next-line no-console
     console.log('[booking] New booking request (no webhook configured):', payload);
   }

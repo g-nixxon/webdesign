@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
-import { ArrowLeft, Clock } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { Button } from '@/components/ui/Button';
@@ -73,10 +73,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             <p className="mt-5 text-base leading-relaxed text-charcoal/80 sm:text-lg">
               {article.excerpt}
             </p>
-            <p className="mt-6 flex items-center gap-1.5 text-xs uppercase tracking-widest text-stone-600">
-              <Clock size={12} />
-              {article.readMinutes} min read
-            </p>
           </header>
 
           <div className="mt-10 space-y-6 text-base leading-relaxed text-charcoal/85 sm:text-lg">
@@ -118,7 +114,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </h2>
             <p className="mt-3 max-w-prose text-base leading-relaxed text-charcoal/80">
               Articles can only do so much. The fastest way to know what’s in
-              your water is to have a Certified Water Specialist test it. No
+              your water is to have a water specialist test it. No
               charge, no obligation.
             </p>
             <div className="mt-6">

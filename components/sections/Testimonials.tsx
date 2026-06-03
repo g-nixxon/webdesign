@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     quote:
-      'We’d been on city water for years and never thought about it. Jay walked us through the results and recommended a small RO at the kitchen — pays for itself in bottled water alone.',
+      'We’d been on city water for years and never thought about it. Jay walked us through the results and recommended a small RO at the kitchen, pays for itself in bottled water alone.',
     name: 'Robert & Susan T.',
     town: 'Greenville, SC',
     system: 'Reverse Osmosis',

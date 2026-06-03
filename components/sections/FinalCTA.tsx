@@ -12,7 +12,7 @@ interface FinalCTAProps {
 export function FinalCTA({
   eyebrow = 'Take the next step',
   title = 'Find out what’s in your water.',
-  description = 'Free in-home visit and water sample. No pressure, no obligation — just the precise readings, in plain language, after the lab comes back.',
+  description = 'Free in-home visit and water sample. No pressure, no obligation, just the precise readings, in plain language, after the lab comes back.',
 }: FinalCTAProps) {
   return (
     <section className="relative overflow-hidden bg-charcoal text-cream">
