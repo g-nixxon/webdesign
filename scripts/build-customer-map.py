@@ -32,6 +32,11 @@ from collections import Counter
 
 # --- paths --------------------------------------------------------------------
 
+# Only customers in these states are public-facing install pins. Out-of-state
+# entries in the CSV (typically friends/family, not service installs) are
+# filtered out so the map matches our actual service footprint.
+ALLOWED_STATES = {"GA", "AL", "NC", "SC", "FL", "TN", "TX", "NY"}
+
 CUSTOMER_CSV = os.path.expanduser(
     "~/Downloads/Filter Tech Customer List - Master List.csv"
 )
@@ -124,6 +129,8 @@ def aggregate_customers(path: str) -> Counter:
         city = r[ci].strip()
         state = r[si].strip().upper()
         if not city or not state:
+            continue
+        if state not in ALLOWED_STATES:
             continue
         counter[(city, state)] += 1
     return counter

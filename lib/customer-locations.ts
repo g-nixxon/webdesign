@@ -1,6 +1,6 @@
 // AUTO-GENERATED from the master customer CSV. Customer PII is NOT included —
 // only (city, state, count, SVG coords) survive the pipeline.
-// Regenerate with the script saved alongside this commit.
+// Regenerate with scripts/build-customer-map.py.
 
 export interface CustomerLocation {
   city: string;
@@ -129,16 +129,13 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Conyers", state: 'GA', x: 704.6, y: 385.4, count: 1 },
   { city: "Gray", state: 'GA', x: 713.7, y: 397.4, count: 1 },
   { city: "Bristol", state: 'GA', x: 738.7, y: 425.4, count: 1 },
-  { city: "Cambridge", state: 'MA', x: 861.5, y: 183.6, count: 1 },
   { city: "Fairmount", state: 'GA', x: 691.0, y: 372.1, count: 1 },
   { city: "Carrollton", state: 'TX', x: 500.9, y: 411.4, count: 1 },
   { city: "Homer", state: 'GA', x: 711.0, y: 371.7, count: 1 },
-  { city: "Chicago", state: 'IL', x: 633.8, y: 233.5, count: 1 },
   { city: "Delta", state: 'AL', x: 678.9, y: 393.1, count: 1 },
   { city: "Murphy", state: 'NC', x: 699.9, y: 359.0, count: 1 },
   { city: "Lexington", state: 'GA', x: 718.7, y: 380.0, count: 1 },
   { city: "Albany", state: 'NY', x: 824.3, y: 187.5, count: 1 },
-  { city: "Palatine", state: 'IL', x: 626.9, y: 229.4, count: 1 },
   { city: "Kingsland", state: 'GA', x: 749.2, y: 435.7, count: 1 },
   { city: "Ellenwood", state: 'GA', x: 700.5, y: 387.6, count: 1 },
   { city: "Turin", state: 'GA', x: 695.6, y: 393.7, count: 1 },
@@ -155,7 +152,6 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Dadeville", state: 'AL', x: 678.7, y: 405.4, count: 1 },
   { city: "Woodland", state: 'AL', x: 684.2, y: 394.5, count: 1 },
   { city: "Loganville", state: 'GA', x: 706.1, y: 382.4, count: 1 },
-  { city: "Bakersfield", state: 'CA', x: 161.4, y: 321.6, count: 1 },
   { city: "Greenville", state: 'SC', x: 726.7, y: 359.9, count: 1 },
   { city: "Port Charlotte", state: 'FL', x: 752.8, y: 509.1, count: 1 },
   { city: "Barney", state: 'GA', x: 719.1, y: 435.8, count: 1 },
@@ -180,7 +176,6 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Byron", state: 'GA', x: 711.1, y: 405.0, count: 1 },
   { city: "Carlton", state: 'GA', x: 719.7, y: 377.8, count: 1 },
   { city: "Thomson", state: 'GA', x: 729.1, y: 386.4, count: 1 },
-  { city: "Winona", state: 'MS', x: 614.7, y: 398.1, count: 1 },
   { city: "Fort Payne", state: 'AL', x: 676.3, y: 374.3, count: 1 },
   { city: "Graham", state: 'AL', x: 684.3, y: 392.4, count: 1 },
   { city: "Ball Ground", state: 'GA', x: 697.4, y: 373.8, count: 1 },
@@ -199,13 +194,10 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Newberry", state: 'FL', x: 738.0, y: 459.4, count: 1 },
   { city: "Eufaula", state: 'AL', x: 690.4, y: 422.0, count: 1 },
   { city: "Vidalia", state: 'GA', x: 734.0, y: 410.7, count: 1 },
-  { city: "Medina", state: 'OH', x: 717.1, y: 238.1, count: 1 },
   { city: "Lawrenceville", state: 'GA', x: 704.8, y: 380.6, count: 1 },
   { city: "Monticello", state: 'GA', x: 710.3, y: 392.2, count: 1 },
   { city: "Oxford", state: 'GA', x: 707.1, y: 386.6, count: 1 },
-  { city: "Livermore", state: 'CA', x: 132.1, y: 267.9, count: 1 },
   { city: "Danielsville", state: 'GA', x: 715.0, y: 374.8, count: 1 },
-  { city: "Ward Hill", state: 'MA', x: 859.7, y: 176.6, count: 1 },
   { city: "Savannah", state: 'GA', x: 755.2, y: 410.0, count: 1 },
   { city: "Crossville", state: 'TN', x: 683.8, y: 344.1, count: 1 },
   { city: "Norwood", state: 'GA', x: 725.3, y: 386.9, count: 1 },
@@ -218,7 +210,6 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Madison", state: 'AL', x: 658.8, y: 371.8, count: 1 },
   { city: "Perry", state: 'GA', x: 712.1, y: 408.5, count: 1 },
   { city: "Mystic", state: 'GA', x: 720.6, y: 423.7, count: 1 },
-  { city: "Yukon", state: 'OK', x: 487.7, y: 362.1, count: 1 },
   { city: "Smyrna", state: 'TN', x: 660.9, y: 346.1, count: 1 },
   { city: "Forsyth", state: 'GA', x: 707.4, y: 397.6, count: 1 },
   { city: "Tignall", state: 'GA', x: 724.8, y: 379.0, count: 1 },
@@ -229,8 +220,6 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Yatesville", state: 'GA', x: 704.2, y: 400.7, count: 1 },
   { city: "Comer", state: 'GA', x: 717.6, y: 376.0, count: 1 },
   { city: "Elko", state: 'GA', x: 712.4, y: 410.9, count: 1 },
-  { city: "Indianapolis", state: 'IN', x: 658.6, y: 269.0, count: 1 },
-  { city: "Philadelphia", state: 'PA', x: 815.2, y: 245.0, count: 1 },
   { city: "Dallas", state: 'TX', x: 502.3, y: 410.8, count: 1 },
   { city: "Twin City", state: 'GA', x: 736.1, y: 402.2, count: 1 },
   { city: "Taylorsville", state: 'GA', x: 688.5, y: 379.0, count: 1 },
@@ -238,6 +227,6 @@ export const customerLocations: CustomerLocation[] = [
   { city: "Hephzibah", state: 'GA', x: 735.8, y: 388.0, count: 1 },
 ];
 
-export const TOTAL_INSTALLS = 882;
-export const TOTAL_CITIES = 225;
-export const STATES_WITH_INSTALLS = ['AL', 'CA', 'FL', 'GA', 'IL', 'IN', 'MA', 'MS', 'NC', 'NY', 'OH', 'OK', 'PA', 'SC', 'TN', 'TX'];
+export const TOTAL_INSTALLS = 871;
+export const TOTAL_CITIES = 214;
+export const STATES_WITH_INSTALLS = ['AL', 'FL', 'GA', 'NC', 'NY', 'SC', 'TN', 'TX'];
