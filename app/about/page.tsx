@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Container } from '@/components/layout/Container';
 import { PageHero } from '@/components/sections/PageHero';
-import { PullQuote } from '@/components/ui/PullQuote';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 
@@ -48,7 +47,7 @@ export default function AboutPage() {
       <section className="bg-cream py-20 sm:py-28">
         <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <EyebrowLabel>The Path Here</EyebrowLabel>
+            <EyebrowLabel>Jay’s Path to CEO</EyebrowLabel>
             <h2 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
               Three decades, one trade.
             </h2>
@@ -69,18 +68,10 @@ export default function AboutPage() {
               <p>
                 In 2004 he joined Filter Tech of Georgia, then based in Tyrone.
                 He bought the company in 2010, renamed it Filter Tech Inc., and
-                moved the headquarters to Hogansville in 2019. He’s run it the
-                same way the whole time: <em>test first, explain everything,
-                never sell a system you don’t need.</em>
+                moved the headquarters to Hogansville in 2019.
               </p>
             </div>
 
-            <div className="mt-10">
-              <PullQuote
-                quote="My favorite test result is the one where the water’s fine and I get to drive home without selling anything. That’s how you build a business that lasts."
-                cite="Jay Hanlon"
-              />
-            </div>
           </div>
 
           <aside className="lg:col-span-5">
@@ -97,7 +88,7 @@ export default function AboutPage() {
                   <dt className="text-xs uppercase tracking-widest text-stone-600">
                     Homes Served
                   </dt>
-                  <dd className="mt-1 font-serif text-3xl text-charcoal">1,200+</dd>
+                  <dd className="mt-1 font-serif text-3xl text-charcoal">850+</dd>
                 </div>
                 <div>
                   <dt className="text-xs uppercase tracking-widest text-stone-600">
