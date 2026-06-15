@@ -9,10 +9,10 @@ export const site = {
   phoneDisplay: '(770) 487-1066',
   email: 'filtertechinc@gmail.com',
   address: {
-    street: '101 Main Street',
+    // Street address and ZIP intentionally omitted — HQ is at a private
+    // residence. City + region are kept for local SEO context only.
     city: 'Hogansville',
     region: 'GA',
-    postalCode: '30230',
     country: 'US',
   },
   hours: 'Mon–Fri 8:00 AM – 5:00 PM',

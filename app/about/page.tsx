@@ -5,7 +5,6 @@ import { PageHero } from '@/components/sections/PageHero';
 import { PullQuote } from '@/components/ui/PullQuote';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { FinalCTA } from '@/components/sections/FinalCTA';
-import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'About Jay Hanlon',
@@ -121,16 +120,6 @@ export default function AboutPage() {
                   <li>Certified Installer</li>
                   <li>RO / Ultra-filtration Certified</li>
                 </ul>
-              </div>
-              <div className="mt-8 border-t border-stone-300 pt-6">
-                <p className="text-xs uppercase tracking-widest text-stone-600">
-                  Headquarters
-                </p>
-                <p className="mt-3 text-sm text-charcoal">
-                  {site.address.street}
-                  <br />
-                  {site.address.city}, {site.address.region} {site.address.postalCode}
-                </p>
               </div>
             </div>
           </aside>

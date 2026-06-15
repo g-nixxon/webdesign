@@ -84,7 +84,6 @@ export function FAQ() {
             <SectionHeading
               eyebrow="Common Questions"
               title="Here’s what people ask us most."
-              description="The questions we hear most often, answered the way we’d answer them on your back porch."
             />
           </div>
           <div className="lg:col-span-8">

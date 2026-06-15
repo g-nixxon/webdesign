@@ -30,7 +30,7 @@ export function Hero() {
           <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/80 sm:text-lg">
             For more than 30 years, Jay Hanlon has been testing water and
             building filtration systems that fit the home, the family, and the
-            problem. No pressure. No guessing. Just answers.
+            problem.
           </p>
           <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-6">
             <Button href="/book" size="lg">

@@ -79,16 +79,9 @@ const localBusinessJsonLd = {
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: site.address.street,
     addressLocality: site.address.city,
     addressRegion: site.address.region,
-    postalCode: site.address.postalCode,
     addressCountry: site.address.country,
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 33.1718,
-    longitude: -84.9138,
   },
   areaServed: site.serviceArea.map((region) => ({
     '@type': 'State',

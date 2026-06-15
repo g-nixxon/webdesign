@@ -105,10 +105,10 @@ export function Testimonials() {
     <section className="bg-cream py-20 sm:py-28">
       <Container>
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
-          <div className="max-w-2xl">
+          <div className="flex-1">
             <SectionHeading
               eyebrow="From Our Neighbors"
-              title="90% of our work comes from referrals."
+              title="90% of our jobs come from referrals."
               description="That’s not marketing. That’s the way it’s been for two decades."
             />
           </div>

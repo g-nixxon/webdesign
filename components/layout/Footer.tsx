@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook } from 'lucide-react';
+import { Phone, Mail, Facebook } from 'lucide-react';
 import { Logo } from './Logo';
 import { site, services } from '@/lib/site';
 
@@ -31,14 +31,6 @@ export function Footer() {
               <Mail size={14} />
               {site.email}
             </a>
-            <div className="flex items-start gap-2">
-              <MapPin size={14} className="mt-1 flex-none" />
-              <span>
-                {site.address.street}
-                <br />
-                {site.address.city}, {site.address.region} {site.address.postalCode}
-              </span>
-            </div>
           </div>
 
           {/* Social */}
