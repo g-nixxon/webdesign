@@ -16,15 +16,14 @@ const trustPoints = [
   'Water samples collected for precise lab testing',
   'On-site survey of where a system would go',
   'No pressure to buy anything',
-  'Plain-language results report when the lab comes back',
 ];
 
 export default function BookPage() {
   return (
     <>
       <PageHero
-        eyebrow="Book Your Visit"
-        title="Free in-home visit. Lab-grade testing."
+        eyebrow="Book Your Free Water Test"
+        title="Learn what’s actually in the water you use and consume every day."
         description="Tell us a little about your water and where you live. Jay will reach out to confirm a time that works for you."
       />
 
@@ -39,7 +38,7 @@ export default function BookPage() {
           <aside className="lg:col-span-5">
             <div className="sticky top-24 space-y-8">
               <div>
-                <EyebrowLabel>What You Get</EyebrowLabel>
+                <EyebrowLabel>What to Expect</EyebrowLabel>
                 <h2 className="mt-4 font-serif text-2xl text-charcoal sm:text-3xl">
                   No pressure. No obligation. Just answers.
                 </h2>
@@ -64,8 +63,9 @@ export default function BookPage() {
               <div className="border-l-[3px] border-red bg-cream p-6">
                 <blockquote className="font-serif text-lg leading-snug text-charcoal sm:text-xl">
                   <p>
-                    “Half of the homes I visit don’t need a system at all. I’m
-                    happy to tell them so.”
+                    “I believe it’s not my job to sell you a system. It’s my job
+                    to give you all the information you need to make the best
+                    possible decision for you and your family.”
                   </p>
                 </blockquote>
                 <p className="mt-3 text-xs text-stone-600">
