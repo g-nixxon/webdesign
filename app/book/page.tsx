@@ -24,7 +24,7 @@ export default function BookPage() {
       <PageHero
         eyebrow="Book Your Free Water Test"
         title="Learn what’s actually in the water you use and consume every day."
-        description="Tell us a little about your water and where you live. Jay will reach out to confirm a time that works for you."
+        description="Tell us a little about your water and where you live. Jay will reach out to schedule an in-home visit. The free water test is really an on-site survey where he collects water samples and walks through where a filtration system would go in your home."
       />
 
       <section className="bg-cream py-16 sm:py-24">
