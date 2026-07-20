@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { cn } from '@/lib/cn';
 
 interface LabelProps {
@@ -68,26 +69,35 @@ export function Field({
 const inputStyles =
   'w-full min-h-[48px] rounded-sm border border-stone-300 bg-white px-4 text-base text-charcoal placeholder:text-stone-600 focus-visible:border-charcoal focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-charcoal disabled:opacity-50 aria-[invalid=true]:border-red';
 
-export const Input = ({ className, ...props }: React.InputHTMLAttributes<HTMLInputElement>) => (
-  <input className={cn(inputStyles, className)} {...props} />
-);
+// Input/Select/Textarea use forwardRef so React Hook Form's `register()` ref
+// reaches the underlying DOM element. Without this, RHF can't read the input
+// values on submit and every field appears empty, even when it's clearly not.
+export const Input = forwardRef<
+  HTMLInputElement,
+  React.InputHTMLAttributes<HTMLInputElement>
+>(({ className, ...props }, ref) => (
+  <input ref={ref} className={cn(inputStyles, className)} {...props} />
+));
+Input.displayName = 'Input';
 
-export const Textarea = ({
-  className,
-  ...props
-}: React.TextareaHTMLAttributes<HTMLTextAreaElement>) => (
+export const Textarea = forwardRef<
+  HTMLTextAreaElement,
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>
+>(({ className, ...props }, ref) => (
   <textarea
+    ref={ref}
     className={cn(inputStyles, 'min-h-[120px] py-3 leading-relaxed', className)}
     {...props}
   />
-);
+));
+Textarea.displayName = 'Textarea';
 
-export const Select = ({
-  className,
-  children,
-  ...props
-}: React.SelectHTMLAttributes<HTMLSelectElement>) => (
+export const Select = forwardRef<
+  HTMLSelectElement,
+  React.SelectHTMLAttributes<HTMLSelectElement>
+>(({ className, children, ...props }, ref) => (
   <select
+    ref={ref}
     className={cn(inputStyles, 'appearance-none bg-no-repeat pr-10', className)}
     style={{
       backgroundImage:
@@ -98,4 +108,5 @@ export const Select = ({
   >
     {children}
   </select>
-);
+));
+Select.displayName = 'Select';
