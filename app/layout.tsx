@@ -104,6 +104,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="flex min-h-screen flex-col bg-cream">
         <Script
+          id="gtag-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18309666529"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18309666529');
+          `}
+        </Script>
+        <Script
           id="localbusiness-jsonld"
           type="application/ld+json"
           strategy="afterInteractive"
