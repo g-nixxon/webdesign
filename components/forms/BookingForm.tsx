@@ -13,6 +13,7 @@ import {
   type BookingInput,
 } from '@/lib/schemas';
 import { cn } from '@/lib/cn';
+import { reportConversion, conversionLabels } from '@/lib/gtag';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -50,6 +51,7 @@ export function BookingForm() {
         throw new Error(body.message || 'Something went wrong');
       }
       setStatus('success');
+      reportConversion(conversionLabels.leadFormSubmit);
       reset();
     } catch (e) {
       setStatus('error');

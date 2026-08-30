@@ -7,6 +7,7 @@ import { CheckCircle2, Loader2 } from 'lucide-react';
 import { Field, Input, Textarea } from './Field';
 import { Button } from '@/components/ui/Button';
 import { contactSchema, type ContactInput } from '@/lib/schemas';
+import { reportConversion, conversionLabels } from '@/lib/gtag';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -38,6 +39,7 @@ export function ContactForm() {
         throw new Error(body.message || 'Something went wrong');
       }
       setStatus('success');
+      reportConversion(conversionLabels.leadFormSubmit);
       reset();
     } catch (e) {
       setStatus('error');
