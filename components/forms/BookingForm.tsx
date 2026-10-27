@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -14,12 +14,21 @@ import {
 } from '@/lib/schemas';
 import { cn } from '@/lib/cn';
 import { SUBMITTED_FLAG } from '@/lib/submission';
+import {
+  HONEYPOT_FIELD,
+  LOADED_AT_FIELD,
+  MIN_SUBMIT_MS,
+} from '@/lib/antispam';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export function BookingForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [serverError, setServerError] = useState<string | null>(null);
+
+  // Spam guards (see lib/antispam). Both are invisible to real visitors.
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const loadedAtRef = useRef<number>(Date.now());
 
   const {
     register,
@@ -37,13 +46,27 @@ export function BookingForm() {
   });
 
   const onSubmit = async (data: BookingInput) => {
+    // Honeypot: a filled hidden field is a bot. Drop silently, no API call.
+    if ((honeypotRef.current?.value ?? '').trim() !== '') return;
+    // Time-trap: a submit faster than a human can manage. Ask to resubmit
+    // instead of dead-ending, so a rare fast real visitor is never lost.
+    if (Date.now() - loadedAtRef.current < MIN_SUBMIT_MS) {
+      setStatus('error');
+      setServerError('Please take a moment, then submit again.');
+      return;
+    }
+
     setStatus('submitting');
     setServerError(null);
     try {
       const res = await fetch('/api/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          [HONEYPOT_FIELD]: honeypotRef.current?.value ?? '',
+          [LOADED_AT_FIELD]: String(loadedAtRef.current),
+        }),
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
@@ -69,6 +92,22 @@ export function BookingForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="grid gap-6" noValidate>
+      {/* Honeypot: hidden from people, tempting to bots. Must stay empty. */}
+      <div
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}
+      >
+        <label htmlFor="company-bf">Company</label>
+        <input
+          id="company-bf"
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          ref={honeypotRef}
+          defaultValue=""
+        />
+      </div>
       <fieldset className="grid gap-6">
         <legend className="sr-only">Your details</legend>
         <Field id="name" label="Your name" required error={errors.name?.message}>

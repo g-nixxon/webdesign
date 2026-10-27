@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { bookingSchema } from '@/lib/schemas';
+import { spamReason } from '@/lib/antispam';
 
 export const runtime = 'nodejs';
 
@@ -9,6 +10,15 @@ export async function POST(request: Request) {
     json = await request.json();
   } catch {
     return NextResponse.json({ message: 'Invalid JSON' }, { status: 400 });
+  }
+
+  // Silently drop likely bots: do not forward to the CRM, but answer ok so the
+  // bot learns nothing. Real submits never match (hidden honeypot + JS timestamp).
+  const botReason = spamReason((json ?? {}) as Record<string, unknown>);
+  if (botReason) {
+    // eslint-disable-next-line no-console
+    console.log('[booking] dropped likely bot submission:', botReason);
+    return NextResponse.json({ ok: true });
   }
 
   const parsed = bookingSchema.safeParse(json);
