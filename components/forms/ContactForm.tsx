@@ -3,11 +3,11 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CheckCircle2, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Field, Input, Textarea } from './Field';
 import { Button } from '@/components/ui/Button';
 import { contactSchema, type ContactInput } from '@/lib/schemas';
-import { reportConversion, conversionLabels } from '@/lib/gtag';
+import { SUBMITTED_FLAG } from '@/lib/submission';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -19,7 +19,6 @@ export function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm<ContactInput>({
     resolver: zodResolver(contactSchema),
     defaultValues: { phone: '', subject: '' },
@@ -38,9 +37,16 @@ export function ContactForm() {
         const body = await res.json().catch(() => ({}));
         throw new Error(body.message || 'Something went wrong');
       }
-      setStatus('success');
-      reportConversion(conversionLabels.leadFormSubmit);
-      reset();
+      // Send the visitor to the dedicated thank-you URL. A full navigation
+      // (not a client-side transition) makes the Google tag fire on /submission
+      // so the page-load conversion records reliably.
+      try {
+        sessionStorage.setItem(SUBMITTED_FLAG, '1');
+      } catch {
+        // sessionStorage can be unavailable (private mode); navigation still works.
+      }
+      window.location.assign('/submission');
+      return;
     } catch (e) {
       setStatus('error');
       setServerError(
@@ -48,23 +54,6 @@ export function ContactForm() {
       );
     }
   };
-
-  if (status === 'success') {
-    return (
-      <div className="flex flex-col items-start gap-4 py-6">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-charcoal text-charcoal">
-          <CheckCircle2 size={24} />
-        </div>
-        <h3 className="font-serif text-2xl text-charcoal">Got it.</h3>
-        <p className="text-base leading-relaxed text-charcoal/85">
-          We’ll respond within 1–2 business days.
-        </p>
-        <Button variant="secondary" onClick={() => setStatus('idle')}>
-          Send another message
-        </Button>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="grid gap-5" noValidate>

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CheckCircle2, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Field, Input, Textarea, Select, Label } from './Field';
 import { Button } from '@/components/ui/Button';
 import {
@@ -13,7 +13,7 @@ import {
   type BookingInput,
 } from '@/lib/schemas';
 import { cn } from '@/lib/cn';
-import { reportConversion, conversionLabels } from '@/lib/gtag';
+import { SUBMITTED_FLAG } from '@/lib/submission';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -26,7 +26,6 @@ export function BookingForm() {
     handleSubmit,
     control,
     formState: { errors },
-    reset,
   } = useForm<BookingInput>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
@@ -50,9 +49,16 @@ export function BookingForm() {
         const body = await res.json().catch(() => ({}));
         throw new Error(body.message || 'Something went wrong');
       }
-      setStatus('success');
-      reportConversion(conversionLabels.leadFormSubmit);
-      reset();
+      // Send the visitor to the dedicated thank-you URL. A full navigation
+      // (not a client-side transition) makes the Google tag fire on /submission
+      // so the page-load conversion records reliably.
+      try {
+        sessionStorage.setItem(SUBMITTED_FLAG, '1');
+      } catch {
+        // sessionStorage can be unavailable (private mode); navigation still works.
+      }
+      window.location.assign('/submission');
+      return;
     } catch (e) {
       setStatus('error');
       setServerError(
@@ -60,31 +66,6 @@ export function BookingForm() {
       );
     }
   };
-
-  if (status === 'success') {
-    return (
-      <div className="flex flex-col items-start gap-4 py-6">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-charcoal text-charcoal">
-          <CheckCircle2 size={24} />
-        </div>
-        <h2 className="font-serif text-2xl text-charcoal sm:text-3xl">
-          Thank you. We’ll be in touch shortly.
-        </h2>
-        <p className="text-base leading-relaxed text-charcoal/85">
-          A specialist will reach out within 1–2 business days to confirm a
-          time that works for you. If your situation is urgent, please call us
-          directly.
-        </p>
-        <Button
-          variant="secondary"
-          onClick={() => setStatus('idle')}
-          className="mt-4"
-        >
-          Submit another request
-        </Button>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="grid gap-6" noValidate>
